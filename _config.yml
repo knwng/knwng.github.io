@@ -22,7 +22,8 @@ pretty_urls:
 
 # Directory
 source_dir: source
-public_dir: public
+# public_dir: public
+public_dir: docs
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
@@ -100,5 +101,8 @@ theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: ''
+# deploy:
+#   type: git
+#   repo: https://github.com/knwng/knwng.github.io
+#   # example, https://github.com/hexojs/hexojs.github.io
+#   branch: master
