@@ -41,7 +41,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 syntax_highlighter: highlight.js
@@ -109,3 +109,7 @@ theme: next
 #   repo: https://github.com/knwng/knwng.github.io
 #   # example, https://github.com/hexojs/hexojs.github.io
 #   branch: master
+
+marked:
+  prependRoot: true
+  postAsset: true

@@ -164,6 +164,161 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://骞.wang/2024/09/29/Make-Your-Win-Behave-Like-Mac-Use-Mac-Magic-Tracepad-and-HHKB-on-a-ThinkPad/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Kyle Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kyle's Personal Website">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/09/29/Make-Your-Win-Behave-Like-Mac-Use-Mac-Magic-Tracepad-and-HHKB-on-a-ThinkPad/" class="post-title-link" itemprop="url">Make Your Win Behave Like Mac: Use Mac Magic TracePad and HHKB on a ThinkPad</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2024-09-29 15:41:26 / Modified: 15:41:27" itemprop="dateCreated datePublished" datetime="2024-09-29T15:41:26-07:00">2024-09-29</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/tech/" itemprop="url" rel="index"><span itemprop="name">tech</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Recently, for some reason(sadly), I have to use ThinkPad and Windows for work. It has been a long time since my last time using a Windows laptop. But with some plugins and key remapping, I managed to imitate a mac-like experience on Windows.</p>
+<h1 id="Use-Mac-Magic-TracePad-on-Windows"><a href="#Use-Mac-Magic-TracePad-on-Windows" class="headerlink" title="Use Mac Magic TracePad on Windows"></a>Use Mac Magic TracePad on Windows</h1><h2 id="mac-precision-touchpad"><a href="#mac-precision-touchpad" class="headerlink" title="mac-precision-touchpad"></a>mac-precision-touchpad</h2><p><a target="_blank" rel="noopener" href="https://github.com/imbushuo/mac-precision-touchpad">mac-precision-touchpad</a> is a great plugin to use tracepad on windows.</p>
+<p>You can easily install it by following the instruction on Github and no further configuration is needed.</p>
+<h2 id="Change-Touchpad-Gestures"><a href="#Change-Touchpad-Gestures" class="headerlink" title="Change Touchpad Gestures"></a>Change Touchpad Gestures</h2><p>Although we can use TracePad now, the gestures on Windows are still slightly different from macos.</p>
+<p>To change that, we can go to <code>Settings-&gt;Bluetooth &amp; devices-&gt;Touchpad</code>, then you can change the gestures to fit your habit.</p>
+<p>For example, we typically use three-fingers-swipes to switch between desktops. So we can go to <code>Gestures &amp; interaction-&gt;Three-finger gestures-&gt;Swipes</code> and change the behavior to <code>Switch desktops and show desktop</code>.</p>
+<h1 id="Spotlight-Alternative"><a href="#Spotlight-Alternative" class="headerlink" title="Spotlight Alternative"></a>Spotlight Alternative</h1><p>I’m an avid user of spotlight. I’m using it not only as an app launcher, but also as a visualized clipboard.</p>
+<p>Fortunately, Microsoft has an open-sourced project called <a target="_blank" rel="noopener" href="https://github.com/microsoft/PowerToys">PowerToys</a> which has many useful tools, including PowerToys Run a spotlight alternative.</p>
+<p>Again, you can easily install it from Github. Then you can use <code>Alt + Space</code> to bring up PowerToys Run.</p>
+<p>There are other useful tools you can explore on your own.</p>
+<h1 id="Keyboard-Remapping"><a href="#Keyboard-Remapping" class="headerlink" title="Keyboard Remapping"></a>Keyboard Remapping</h1><p>There are many differences between thinkpad keyboard, macbook keyboard and HHKB, so keyboard remapping is essential to imitate macbook on thinkpad.</p>
+<p>Many softwares can do this, like <a target="_blank" rel="noopener" href="https://github.com/randyrants/sharpkeys">SharpKeys</a>, <a target="_blank" rel="noopener" href="https://www.autohotkey.com/">AutoHotkey</a>, <a target="_blank" rel="noopener" href="https://learn.microsoft.com/en-us/windows/powertoys/keyboard-manager">PowerToys Keyboard Manager utility for Windows</a>, etc.</p>
+<p>I have two keyboards, HHKB and thinkpad’s builtin keyboard, so I personally chose AutoHotkey, but first, let’s go though these options to see the difference.</p>
+<h2 id="SharpKeys"><a href="#SharpKeys" class="headerlink" title="SharpKeys"></a>SharpKeys</h2><ul>
+<li>pro<ul>
+<li>GUI interface, easy to use</li>
+<li>Multiple profiles</li>
+</ul>
+</li>
+<li>con<ul>
+<li>Don’t support hot reload, which means you need to logout&#x2F;restart the system to make the change effective</li>
+<li>Can only remap keystrokes, but can’t remap hotkeys&#x2F;shortcuts(a combination of keystrokes)</li>
+</ul>
+</li>
+</ul>
+<h2 id="PowerToys-Keyboard-Manager"><a href="#PowerToys-Keyboard-Manager" class="headerlink" title="PowerToys Keyboard Manager"></a>PowerToys Keyboard Manager</h2><ul>
+<li>pro<ul>
+<li>GUI interface, easy to use</li>
+<li>Can remap both keystrokes and hotkeys</li>
+</ul>
+</li>
+<li>con<ul>
+<li>Don’t support multiple profiles for different keyboards</li>
+</ul>
+</li>
+</ul>
+<h2 id="AutoHotkey"><a href="#AutoHotkey" class="headerlink" title="AutoHotkey"></a>AutoHotkey</h2><ul>
+<li>pro<ul>
+<li>Richer syntax to support complex tasks</li>
+<li>hot reload without logout&#x2F;restart the system</li>
+<li>Multiple profiles</li>
+</ul>
+</li>
+<li>con<ul>
+<li>No GUI, need to write scripts</li>
+</ul>
+</li>
+</ul>
+<h3 id="Tutorials-and-Documentations"><a href="#Tutorials-and-Documentations" class="headerlink" title="Tutorials and Documentations"></a>Tutorials and Documentations</h3><p>Since AutoHotkey uses scripts, you need to first learn the syntax.</p>
+<p>Fortunately, AutoHotkey provides comprehensive tutorials and documentations, like, <a target="_blank" rel="noopener" href="https://www.autohotkey.com/docs/v2/Tutorial.htm">Beginner Tutorial | AutoHotkey v2</a>, <a target="_blank" rel="noopener" href="https://www.autohotkey.com/docs/v2/howto/WriteHotkeys.htm">How to Write Hotkeys | AutoHotkey v2</a>, etc.</p>
+<p>I will also post the scripts I’m using for reference.</p>
+<h3 id="Remapping-Script-for-ThinkPad-Builtin-Keyboard"><a href="#Remapping-Script-for-ThinkPad-Builtin-Keyboard" class="headerlink" title="Remapping Script for ThinkPad Builtin Keyboard"></a>Remapping Script for ThinkPad Builtin Keyboard</h3><figure class="highlight ahk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#Requires AutoHotkey v2.0</span></span><br><span class="line"></span><br><span class="line"><span class="title">LAlt::</span>LCtrl</span><br><span class="line"><span class="title">LCtrl::</span>LAlt</span><br></pre></td></tr></table></figure>
+
+<p>Updated version: <a target="_blank" rel="noopener" href="https://gist.github.com/knwng/9619494c29ae00334270fc87b923e35b">Thinkpad Keyboard Mapping</a></p>
+<h3 id="Remapping-Script-for-HHKB-Builtin-Keyboard"><a href="#Remapping-Script-for-HHKB-Builtin-Keyboard" class="headerlink" title="Remapping Script for HHKB Builtin Keyboard"></a>Remapping Script for HHKB Builtin Keyboard</h3><figure class="highlight ahk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#Requires AutoHotkey v2.0</span></span><br><span class="line"></span><br><span class="line"><span class="comment">; Switch between tabs</span></span><br><span class="line"><span class="comment">; Ctrl + Alt + L/R =&gt; Ctrl + PgDn/PgUp</span></span><br><span class="line"><span class="title">^!Right::</span>Send &#x27;^&#123;PgDn&#125;&#x27;</span><br><span class="line"><span class="title">^!Left::</span>Send &#x27;^&#123;PgUp&#125;&#x27;</span><br><span class="line"></span><br><span class="line"><span class="comment">; Jump a word</span></span><br><span class="line"><span class="comment">; Alt + L/R =&gt; Ctrl + L/R</span></span><br><span class="line"><span class="title">!Left::</span>Send &#x27;^&#123;Left&#125;&#x27;</span><br><span class="line"><span class="title">!Right::</span>Send &#x27;^&#123;Right&#125;&#x27;</span><br><span class="line"></span><br><span class="line"><span class="comment">; Delete a word</span></span><br><span class="line"><span class="comment">; Alt + Backspace =&gt; Ctrl + Backspace</span></span><br><span class="line"><span class="title">!Backspace::</span>Send &#x27;^&#123;Backspace&#125;&#x27;</span><br><span class="line"></span><br><span class="line"><span class="comment">; Switch between virtual desktops</span></span><br><span class="line"><span class="comment">; Ctrl + L/R =&gt; Win + Ctrl + L/R</span></span><br><span class="line"><span class="title">^Left::</span>Send &#x27;#^&#123;Left&#125;&#x27;</span><br><span class="line"><span class="title">^Right::</span>Send &#x27;#^&#123;Right&#125;&#x27;</span><br><span class="line"></span><br><span class="line"><span class="comment">; CMD/Win =&gt; Ctrl</span></span><br><span class="line"><span class="title">LWin::</span>LCtrl</span><br></pre></td></tr></table></figure>
+
+<p>Updated version: <a target="_blank" rel="noopener" href="https://gist.github.com/knwng/b98b72232e98950eb0f9ef293b4ca55f">HHKB keyboard mapping using AutoHotKey</a></p>
+<h3 id="Compile-Scripts-to-Executables"><a href="#Compile-Scripts-to-Executables" class="headerlink" title="Compile Scripts to Executables"></a>Compile Scripts to Executables</h3><p>After writing the scripts, you need to use AutoHotkey to compile it into executable. Then you can apply the remapping by run the executable without logout&#x2F;restart.</p>
+<h1 id="Terminal-and-Shell"><a href="#Terminal-and-Shell" class="headerlink" title="Terminal and Shell"></a>Terminal and Shell</h1><h2 id="WSL"><a href="#WSL" class="headerlink" title="WSL"></a>WSL</h2><p>WSL becomes pretty mature on Windows 11. You can just setup according to the doc: <a target="_blank" rel="noopener" href="https://learn.microsoft.com/en-us/windows/wsl/install">Install WSL | Microsoft Learn</a>.</p>
+<h2 id="WezTerm"><a href="#WezTerm" class="headerlink" title="WezTerm"></a>WezTerm</h2><p>Regarding the terminal, I’m using <a target="_blank" rel="noopener" href="https://wezfurlong.org/wezterm/index.html">WezTerm</a>, a cross-platform terminal so that I can have similar experience on ThinkPad and Macbook.</p>
+<p>We need to apply some configurations to make it easier for use. To do so, you need to create a config file located at <code>C:\Users\&lt;username&gt;\.wezterm.lua</code>(in WSL, it’s <code>/mnt/c/Users/&lt;username&gt;/.wezterm.lua</code>).</p>
+<p>Here’s my configuration:</p>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">local</span> wezterm = <span class="built_in">require</span> <span class="string">&#x27;wezterm&#x27;</span></span><br><span class="line"><span class="keyword">local</span> act = wezterm.action</span><br><span class="line"></span><br><span class="line"><span class="keyword">local</span> <span class="built_in">config</span> = &#123;&#125;</span><br><span class="line"><span class="keyword">if</span> wezterm.config_builder <span class="keyword">then</span></span><br><span class="line">  <span class="built_in">config</span> = wezterm.config_builder()</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">config</span>.color_scheme = <span class="string">&#x27;AdventureTime&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">local</span> dimmer = &#123; brightness = <span class="number">0.1</span> &#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">config</span>.term = <span class="string">&quot;xterm-256color&quot;</span></span><br><span class="line"><span class="built_in">config</span>.front_end = <span class="string">&quot;WebGpu&quot;</span></span><br><span class="line"><span class="built_in">config</span>.webgpu_power_preference = <span class="string">&quot;HighPerformance&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- scroll bar</span></span><br><span class="line"><span class="built_in">config</span>.enable_scroll_bar = <span class="literal">true</span></span><br><span class="line"><span class="built_in">config</span>.min_scroll_bar_height = <span class="string">&quot;3cell&quot;</span></span><br><span class="line"><span class="built_in">config</span>.colors = &#123;</span><br><span class="line">    scrollbar_thumb = <span class="string">&quot;#CCCCCC&quot;</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- tab bar</span></span><br><span class="line"><span class="built_in">config</span>.enable_tab_bar = <span class="literal">true</span></span><br><span class="line"><span class="built_in">config</span>.hide_tab_bar_if_only_one_tab = <span class="literal">false</span></span><br><span class="line"><span class="built_in">config</span>.use_fancy_tab_bar = <span class="literal">true</span></span><br><span class="line"><span class="built_in">config</span>.tab_max_width = <span class="number">25</span></span><br><span class="line"><span class="built_in">config</span>.show_tab_index_in_tab_bar = <span class="literal">true</span></span><br><span class="line"><span class="built_in">config</span>.switch_to_last_active_tab_when_closing_tab = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- cursor</span></span><br><span class="line"><span class="built_in">config</span>.default_cursor_style = <span class="string">&quot;BlinkingBlock&quot;</span></span><br><span class="line"><span class="built_in">config</span>.cursor_blink_ease_in = <span class="string">&quot;Constant&quot;</span></span><br><span class="line"><span class="built_in">config</span>.cursor_blink_ease_out = <span class="string">&quot;Constant&quot;</span></span><br><span class="line"><span class="built_in">config</span>.cursor_blink_rate = <span class="number">700</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- window</span></span><br><span class="line"><span class="built_in">config</span>.window_close_confirmation = <span class="string">&quot;NeverPrompt&quot;</span></span><br><span class="line"><span class="built_in">config</span>.window_padding = &#123; left = <span class="number">0</span>, right = <span class="number">15</span>, top = <span class="number">0</span>, bottom = <span class="number">0</span> &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">-- change config now</span></span><br><span class="line"><span class="built_in">config</span>.default_domain = <span class="string">&#x27;WSL:Ubuntu&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">config</span>.keys = &#123;</span><br><span class="line">  <span class="comment">-- paste from the clipboard</span></span><br><span class="line">  &#123; key = <span class="string">&#x27;V&#x27;</span>, mods = <span class="string">&#x27;CTRL&#x27;</span>, action = act.PasteFrom <span class="string">&#x27;Clipboard&#x27;</span> &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">-- paste from the primary selection</span></span><br><span class="line">  &#123; key = <span class="string">&#x27;V&#x27;</span>, mods = <span class="string">&#x27;CTRL&#x27;</span>, action = act.PasteFrom <span class="string">&#x27;PrimarySelection&#x27;</span> &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">-- close current tab with Ctrl + w</span></span><br><span class="line">  &#123;</span><br><span class="line">    key = <span class="string">&#x27;w&#x27;</span>,</span><br><span class="line">    mods = <span class="string">&#x27;CTRL&#x27;</span>,</span><br><span class="line">    action = act.CloseCurrentTab &#123; confirm = <span class="literal">false</span> &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">-- create new tab with Ctrl + t</span></span><br><span class="line">  &#123;</span><br><span class="line">    key = <span class="string">&#x27;t&#x27;</span>,</span><br><span class="line">    mods = <span class="string">&#x27;CTRL&#x27;</span>,</span><br><span class="line">    action = act.SpawnTab <span class="string">&#x27;CurrentPaneDomain&#x27;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">-- split current tab into 2 panes horizontally with Ctrl + Shift + Alt + %</span></span><br><span class="line">  &#123;</span><br><span class="line">    key = <span class="string">&#x27;%&#x27;</span>,</span><br><span class="line">    mods = <span class="string">&#x27;CTRL|SHIFT|ALT&#x27;</span>,</span><br><span class="line">    action = act.SplitHorizontal &#123; domain = <span class="string">&#x27;CurrentPaneDomain&#x27;</span> &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">-- split current tab into 2 panes vertically with Ctrl + Shift + Alt + &quot;</span></span><br><span class="line">  &#123;</span><br><span class="line">    key = <span class="string">&#x27;&quot;&#x27;</span>,</span><br><span class="line">    mods = <span class="string">&#x27;CTRL|SHIFT|ALT&#x27;</span>,</span><br><span class="line">    action = act.SplitVertical &#123; domain = <span class="string">&#x27;CurrentPaneDomain&#x27;</span> &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">-- navigate between tabs</span></span><br><span class="line">  &#123; key = <span class="string">&#x27;[&#x27;</span>, mods = <span class="string">&#x27;CTRL&#x27;</span>, action = act.ActivateTabRelative(<span class="number">-1</span>) &#125;,</span><br><span class="line">  &#123; key = <span class="string">&#x27;]&#x27;</span>, mods = <span class="string">&#x27;CTRL&#x27;</span>, action = act.ActivateTabRelative(<span class="number">1</span>) &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">-- change font size</span></span><br><span class="line">  &#123; key = <span class="string">&#x27;+&#x27;</span>, mods = <span class="string">&#x27;SHIFT|CTRL&#x27;</span>, action = act.IncreaseFontSize &#125;,</span><br><span class="line">  &#123; key = <span class="string">&#x27;_&#x27;</span>, mods = <span class="string">&#x27;SHIFT|CTRL&#x27;</span>, action = act.DecreaseFontSize &#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="built_in">config</span></span><br></pre></td></tr></table></figure>
+
+<p>You can get the updated configuration from here: <a target="_blank" rel="noopener" href="https://gist.github.com/knwng/4e8f58f15cf9f383547d12fb3f178d0e">My Wez Term config for windows</a>.</p>
+<h2 id="Zsh-oh-my-zsh"><a href="#Zsh-oh-my-zsh" class="headerlink" title="Zsh &amp;&amp; oh-my-zsh"></a>Zsh &amp;&amp; oh-my-zsh</h2><p>I use zsh and oh-my-zsh shell. There are also some useful shortcuts to ease your life.</p>
+<p>You can put these lines into your <code>~/.zshrc</code>:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># jump a word forward/backward with Alt + &lt;-/-&gt;</span></span><br><span class="line"><span class="built_in">bindkey</span> <span class="string">&quot;^[[1;3C&quot;</span> forward-word</span><br><span class="line"><span class="built_in">bindkey</span> <span class="string">&quot;^[[1;3D&quot;</span> backward-word</span><br><span class="line"></span><br><span class="line"><span class="comment"># delete a word with Alt + Backspace</span></span><br><span class="line"><span class="built_in">bindkey</span> <span class="string">&quot;^H&quot;</span> backward-kill-word</span><br></pre></td></tr></table></figure>
+
+<p>Don’t forget to <code>source ~/.zshrc</code> to activate.</p>
+<h1 id="Multiple-Desktops"><a href="#Multiple-Desktops" class="headerlink" title="Multiple Desktops"></a>Multiple Desktops</h1><p>The multi-desktop in macos is extremely convenient. There is also multi-desktop feature on recent Windows distribution(I’m using Win 11, not sure if it exists in Win 10 or prior.), but the behavior is quite different.</p>
+<p>There are two things I’m the most uncomfortable with when I’m using multi-desktop on Windows, but I still have to work them around.</p>
+<h2 id="No-singleton-instance"><a href="#No-singleton-instance" class="headerlink" title="No singleton instance"></a>No singleton instance</h2><p>One is that it can’t keep a singleton instance of application in all the desktops.</p>
+<p>For example, on MacOS, if you click a link on other desktop, it will jump to the desktop containing web browser to open it, instead of create a new browser. But on Windows, it will create a new web browser on current desktop to open the link. So now you have 2 browsers, which makes it fragmental.</p>
+<h2 id="Multi-desktop-multiple-monitors"><a href="#Multi-desktop-multiple-monitors" class="headerlink" title="Multi-desktop + multiple monitors"></a>Multi-desktop + multiple monitors</h2><p>The other thing is, when you are using multi-desktop on multiple monitors(let’s say monitor A, B, C) and you want to switch to another desktop on monitor A, the desktops on monitor B and C will be switched jointly! Surprise!</p>
+<p>Let’s revise what will happen on MacOS. If you switch the desktop on one monitor, you switch the desktop only on that monitor and others remains unchanged.</p>
+<p>I don’t know why it’s designed like that. A possible explanation can be someone needs different combinations of desktops to work on different tasks. For example, they have 1 combination of vscode + terminal + browser, another is movie player + note + music player and they never ever need to use browser + movie player at the same time. Maybe? I don’t know.</p>
+<p>But what I know is, if you want to only change the desktop on 1 monitor and keep others unchanged, you have to mark the other applications <code>Show this window on all desktops</code>. You can find this option by <code>Win + Tab</code> to bring up desktop manager and right-click on the application.</p>
+<p>It’s kind of ugly, personally, but we have to get used to it. If you have better solution, please let me know.</p>
+<h1 id="Other-Useful-Shortcuts"><a href="#Other-Useful-Shortcuts" class="headerlink" title="Other Useful Shortcuts"></a>Other Useful Shortcuts</h1><ol>
+<li>Lock the screen: <code>Win + L</code></li>
+<li>Regional screenshot(like <code>CMD + SHIFT + 4</code> on MacOS): <code>Win + SHIFT + S</code></li>
+<li>Full-screen screenshot(like <code>CMD + SHIFT + 3</code> on MacOS): <code>Win + PrintScreen</code></li>
+<li>Copy&#x2F;Paste on WSL: <code>CTRL + SHIFT + C/V</code></li>
+<li>Emoji list(like <code>CMD + CTRL + Space</code>): <code>Win + .(period)</code></li>
+<li>Switch between virtual desktops: <code>Win + CTRL + &lt;-/-&gt;</code></li>
+</ol>
+<h1 id="In-the-end"><a href="#In-the-end" class="headerlink" title="In the end"></a>In the end</h1><p>Hopefully I will keep updating this post as I keep optimizing the workflow and exploring new tools. Someone suggested we shouldn’t expect same experience on MacOS and Windows, instead, we need to get used to having different workflows. But I still want to know how far it can go.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://骞.wang/2024/06/06/Python-Multiprocessing-Another-Reason-to-Use-multiprocessing-Process-Instead-of-os-fork/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -543,7 +698,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -555,7 +710,7 @@
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
