@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"xn--jh6a.wang","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"xn--jh6a.wang","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta property="og:type" content="website">
@@ -151,6 +151,9 @@
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/knwng" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
 
     <main class="main">
@@ -187,10 +190,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2024-09-29 15:41:26 / Modified: 15:41:27" itemprop="dateCreated datePublished" datetime="2024-09-29T15:41:26-07:00">2024-09-29</time>
+              <time title="Created: 2024-09-29 15:41:26" itemprop="dateCreated datePublished" datetime="2024-09-29T15:41:26-07:00">2024-09-29</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-10-03 10:59:58" itemprop="dateModified" datetime="2024-10-03T10:59:58-07:00">2024-10-03</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -266,7 +275,7 @@
 <h3 id="Remapping-Script-for-ThinkPad-Builtin-Keyboard"><a href="#Remapping-Script-for-ThinkPad-Builtin-Keyboard" class="headerlink" title="Remapping Script for ThinkPad Builtin Keyboard"></a>Remapping Script for ThinkPad Builtin Keyboard</h3><figure class="highlight ahk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#Requires AutoHotkey v2.0</span></span><br><span class="line"></span><br><span class="line"><span class="title">LAlt::</span>LCtrl</span><br><span class="line"><span class="title">LCtrl::</span>LAlt</span><br></pre></td></tr></table></figure>
 
 <p>Updated version: <a target="_blank" rel="noopener" href="https://gist.github.com/knwng/9619494c29ae00334270fc87b923e35b">Thinkpad Keyboard Mapping</a></p>
-<h3 id="Remapping-Script-for-HHKB-Builtin-Keyboard"><a href="#Remapping-Script-for-HHKB-Builtin-Keyboard" class="headerlink" title="Remapping Script for HHKB Builtin Keyboard"></a>Remapping Script for HHKB Builtin Keyboard</h3><figure class="highlight ahk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#Requires AutoHotkey v2.0</span></span><br><span class="line"></span><br><span class="line"><span class="comment">; Switch between tabs</span></span><br><span class="line"><span class="comment">; Ctrl + Alt + L/R =&gt; Ctrl + PgDn/PgUp</span></span><br><span class="line"><span class="title">^!Right::</span>Send &#x27;^&#123;PgDn&#125;&#x27;</span><br><span class="line"><span class="title">^!Left::</span>Send &#x27;^&#123;PgUp&#125;&#x27;</span><br><span class="line"></span><br><span class="line"><span class="comment">; Jump a word</span></span><br><span class="line"><span class="comment">; Alt + L/R =&gt; Ctrl + L/R</span></span><br><span class="line"><span class="title">!Left::</span>Send &#x27;^&#123;Left&#125;&#x27;</span><br><span class="line"><span class="title">!Right::</span>Send &#x27;^&#123;Right&#125;&#x27;</span><br><span class="line"></span><br><span class="line"><span class="comment">; Delete a word</span></span><br><span class="line"><span class="comment">; Alt + Backspace =&gt; Ctrl + Backspace</span></span><br><span class="line"><span class="title">!Backspace::</span>Send &#x27;^&#123;Backspace&#125;&#x27;</span><br><span class="line"></span><br><span class="line"><span class="comment">; Switch between virtual desktops</span></span><br><span class="line"><span class="comment">; Ctrl + L/R =&gt; Win + Ctrl + L/R</span></span><br><span class="line"><span class="title">^Left::</span>Send &#x27;#^&#123;Left&#125;&#x27;</span><br><span class="line"><span class="title">^Right::</span>Send &#x27;#^&#123;Right&#125;&#x27;</span><br><span class="line"></span><br><span class="line"><span class="comment">; CMD/Win =&gt; Ctrl</span></span><br><span class="line"><span class="title">LWin::</span>LCtrl</span><br></pre></td></tr></table></figure>
+<h3 id="Remapping-Script-for-HHKB-Builtin-Keyboard"><a href="#Remapping-Script-for-HHKB-Builtin-Keyboard" class="headerlink" title="Remapping Script for HHKB Builtin Keyboard"></a>Remapping Script for HHKB Builtin Keyboard</h3><figure class="highlight ahk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#Requires AutoHotkey v2.0</span></span><br><span class="line"></span><br><span class="line"><span class="comment">; Switch between tabs</span></span><br><span class="line"><span class="comment">; Ctrl + Alt + L/R =&gt; Ctrl + PgDn/PgUp</span></span><br><span class="line"><span class="title">^!Right::</span>Send &#x27;^&#123;PgDn&#125;&#x27;</span><br><span class="line"><span class="title">^!Left::</span>Send &#x27;^&#123;PgUp&#125;&#x27;</span><br><span class="line"></span><br><span class="line"><span class="comment">; Jump a word</span></span><br><span class="line"><span class="comment">; Alt + L/R =&gt; Ctrl + L/R</span></span><br><span class="line"><span class="title">!Left::</span>Send &#x27;^&#123;Left&#125;&#x27;</span><br><span class="line"><span class="title">!Right::</span>Send &#x27;^&#123;Right&#125;&#x27;</span><br><span class="line"></span><br><span class="line"><span class="comment">; Delete a word</span></span><br><span class="line"><span class="comment">; Alt + Backspace =&gt; Ctrl + Backspace</span></span><br><span class="line"><span class="title">!Backspace::</span>Send &#x27;^&#123;Backspace&#125;&#x27;</span><br><span class="line"></span><br><span class="line"><span class="comment">; Switch between virtual desktops</span></span><br><span class="line"><span class="comment">; Ctrl + L/R =&gt; Win + Ctrl + L/R</span></span><br><span class="line"><span class="title">^Left::</span>Send &#x27;#^&#123;Left&#125;&#x27;</span><br><span class="line"><span class="title">^Right::</span>Send &#x27;#^&#123;Right&#125;&#x27;</span><br><span class="line"></span><br><span class="line"><span class="comment">; CMD/Win =&gt; Ctrl</span></span><br><span class="line"><span class="title">LWin::</span>LCtrl</span><br></pre></td></tr></table></figure>
 
 <p>Updated version: <a target="_blank" rel="noopener" href="https://gist.github.com/knwng/b98b72232e98950eb0f9ef293b4ca55f">HHKB keyboard mapping using AutoHotKey</a></p>
 <h3 id="Compile-Scripts-to-Executables"><a href="#Compile-Scripts-to-Executables" class="headerlink" title="Compile Scripts to Executables"></a>Compile Scripts to Executables</h3><p>After writing the scripts, you need to use AutoHotkey to compile it into executable. Then you can apply the remapping by run the executable without logout&#x2F;restart.</p>
@@ -345,6 +354,13 @@
 
               <time title="Created: 2024-06-06 22:34:44" itemprop="dateCreated datePublished" datetime="2024-06-06T22:34:44-07:00">2024-06-06</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-10-03 10:59:58" itemprop="dateModified" datetime="2024-10-03T10:59:58-07:00">2024-10-03</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -482,10 +498,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2024-06-06 11:28:59 / Modified: 12:13:18" itemprop="dateCreated datePublished" datetime="2024-06-06T11:28:59-07:00">2024-06-06</time>
+              <time title="Created: 2024-06-06 11:28:59" itemprop="dateCreated datePublished" datetime="2024-06-06T11:28:59-07:00">2024-06-06</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-10-03 10:59:58" itemprop="dateModified" datetime="2024-10-03T10:59:58-07:00">2024-10-03</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -598,7 +620,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-06-06 11:44:08" itemprop="dateModified" datetime="2024-06-06T11:44:08-07:00">2024-06-06</time>
+                <time title="Modified: 2024-10-03 10:59:58" itemprop="dateModified" datetime="2024-10-03T10:59:58-07:00">2024-10-03</time>
               </span>
 
           
