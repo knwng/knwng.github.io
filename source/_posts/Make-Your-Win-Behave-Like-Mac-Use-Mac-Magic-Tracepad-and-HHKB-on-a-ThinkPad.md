@@ -11,6 +11,8 @@ date: 2024-09-29 15:41:26
 
 Recently, for some reason(sadly), I have to use ThinkPad and Windows for work. It has been a long time since my last time using a Windows laptop. But with some plugins and key remapping, I managed to imitate a mac-like experience on Windows.
 
+<!-- more -->
+
 # Use Mac Magic TracePad on Windows
 ## mac-precision-touchpad
 [mac-precision-touchpad](https://github.com/imbushuo/mac-precision-touchpad) is a great plugin to use tracepad on windows.

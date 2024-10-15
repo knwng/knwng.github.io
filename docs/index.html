@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"xn--jh6a.wang","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"xn--jh6a.wang","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta property="og:type" content="website">
@@ -81,6 +81,7 @@
   </style>
 </noscript>
 
+<link rel="alternate" href="/atom.xml" title="Kyle's Personal Website" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -137,6 +138,11 @@
     <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
 
   </li>
+        <li class="menu-item menu-item-rss">
+
+    <a href="/atom.xml" rel="section"><i class="fa fa-fw fa-fa fa-rss"></i>RSS</a>
+
+  </li>
   </ul>
 </nav>
 
@@ -163,6 +169,85 @@
 
           <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://骞.wang/2024/10/14/Package-Conflict-of-Triton-in-PyTorch-ROCm-PYPI-Distribution/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Kyle Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kyle's Personal Website">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/10/14/Package-Conflict-of-Triton-in-PyTorch-ROCm-PYPI-Distribution/" class="post-title-link" itemprop="url">Package Conflict of Triton in PyTorch ROCm PYPI Distribution</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-10-14 22:58:39" itemprop="dateCreated datePublished" datetime="2024-10-14T22:58:39-07:00">2024-10-14</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>184</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h1><p>When you install PyTorch on the ROCm platform for an AMD GPU, a <code>pytorch-triton-rocm</code> package will be installed along with it. If you also install Triton at the same time, you may encounter a version conflict, which can be tricky to resolve.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/10/14/Package-Conflict-of-Triton-in-PyTorch-ROCm-PYPI-Distribution/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
@@ -198,7 +283,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-10-03 10:59:58" itemprop="dateModified" datetime="2024-10-03T10:59:58-07:00">2024-10-03</time>
+                <time title="Modified: 2024-10-11 15:42:58" itemprop="dateModified" datetime="2024-10-11T15:42:58-07:00">2024-10-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -210,7 +295,21 @@
                 </span>
             </span>
 
-          
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>1.4k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>5 mins.</span>
+            </span>
 
         </div>
       </header>
@@ -221,95 +320,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Recently, for some reason(sadly), I have to use ThinkPad and Windows for work. It has been a long time since my last time using a Windows laptop. But with some plugins and key remapping, I managed to imitate a mac-like experience on Windows.</p>
-<h1 id="Use-Mac-Magic-TracePad-on-Windows"><a href="#Use-Mac-Magic-TracePad-on-Windows" class="headerlink" title="Use Mac Magic TracePad on Windows"></a>Use Mac Magic TracePad on Windows</h1><h2 id="mac-precision-touchpad"><a href="#mac-precision-touchpad" class="headerlink" title="mac-precision-touchpad"></a>mac-precision-touchpad</h2><p><a target="_blank" rel="noopener" href="https://github.com/imbushuo/mac-precision-touchpad">mac-precision-touchpad</a> is a great plugin to use tracepad on windows.</p>
-<p>You can easily install it by following the instruction on Github and no further configuration is needed.</p>
-<h2 id="Change-Touchpad-Gestures"><a href="#Change-Touchpad-Gestures" class="headerlink" title="Change Touchpad Gestures"></a>Change Touchpad Gestures</h2><p>Although we can use TracePad now, the gestures on Windows are still slightly different from macos.</p>
-<p>To change that, we can go to <code>Settings-&gt;Bluetooth &amp; devices-&gt;Touchpad</code>, then you can change the gestures to fit your habit.</p>
-<p>For example, we typically use three-fingers-swipes to switch between desktops. So we can go to <code>Gestures &amp; interaction-&gt;Three-finger gestures-&gt;Swipes</code> and change the behavior to <code>Switch desktops and show desktop</code>.</p>
-<h1 id="Spotlight-Alternative"><a href="#Spotlight-Alternative" class="headerlink" title="Spotlight Alternative"></a>Spotlight Alternative</h1><p>I’m an avid user of spotlight. I’m using it not only as an app launcher, but also as a visualized clipboard.</p>
-<p>Fortunately, Microsoft has an open-sourced project called <a target="_blank" rel="noopener" href="https://github.com/microsoft/PowerToys">PowerToys</a> which has many useful tools, including PowerToys Run a spotlight alternative.</p>
-<p>Again, you can easily install it from Github. Then you can use <code>Alt + Space</code> to bring up PowerToys Run.</p>
-<p>There are other useful tools you can explore on your own.</p>
-<h1 id="Keyboard-Remapping"><a href="#Keyboard-Remapping" class="headerlink" title="Keyboard Remapping"></a>Keyboard Remapping</h1><p>There are many differences between thinkpad keyboard, macbook keyboard and HHKB, so keyboard remapping is essential to imitate macbook on thinkpad.</p>
-<p>Many softwares can do this, like <a target="_blank" rel="noopener" href="https://github.com/randyrants/sharpkeys">SharpKeys</a>, <a target="_blank" rel="noopener" href="https://www.autohotkey.com/">AutoHotkey</a>, <a target="_blank" rel="noopener" href="https://learn.microsoft.com/en-us/windows/powertoys/keyboard-manager">PowerToys Keyboard Manager utility for Windows</a>, etc.</p>
-<p>I have two keyboards, HHKB and thinkpad’s builtin keyboard, so I personally chose AutoHotkey, but first, let’s go though these options to see the difference.</p>
-<h2 id="SharpKeys"><a href="#SharpKeys" class="headerlink" title="SharpKeys"></a>SharpKeys</h2><ul>
-<li>pro<ul>
-<li>GUI interface, easy to use</li>
-<li>Multiple profiles</li>
-</ul>
-</li>
-<li>con<ul>
-<li>Don’t support hot reload, which means you need to logout&#x2F;restart the system to make the change effective</li>
-<li>Can only remap keystrokes, but can’t remap hotkeys&#x2F;shortcuts(a combination of keystrokes)</li>
-</ul>
-</li>
-</ul>
-<h2 id="PowerToys-Keyboard-Manager"><a href="#PowerToys-Keyboard-Manager" class="headerlink" title="PowerToys Keyboard Manager"></a>PowerToys Keyboard Manager</h2><ul>
-<li>pro<ul>
-<li>GUI interface, easy to use</li>
-<li>Can remap both keystrokes and hotkeys</li>
-</ul>
-</li>
-<li>con<ul>
-<li>Don’t support multiple profiles for different keyboards</li>
-</ul>
-</li>
-</ul>
-<h2 id="AutoHotkey"><a href="#AutoHotkey" class="headerlink" title="AutoHotkey"></a>AutoHotkey</h2><ul>
-<li>pro<ul>
-<li>Richer syntax to support complex tasks</li>
-<li>hot reload without logout&#x2F;restart the system</li>
-<li>Multiple profiles</li>
-</ul>
-</li>
-<li>con<ul>
-<li>No GUI, need to write scripts</li>
-</ul>
-</li>
-</ul>
-<h3 id="Tutorials-and-Documentations"><a href="#Tutorials-and-Documentations" class="headerlink" title="Tutorials and Documentations"></a>Tutorials and Documentations</h3><p>Since AutoHotkey uses scripts, you need to first learn the syntax.</p>
-<p>Fortunately, AutoHotkey provides comprehensive tutorials and documentations, like, <a target="_blank" rel="noopener" href="https://www.autohotkey.com/docs/v2/Tutorial.htm">Beginner Tutorial | AutoHotkey v2</a>, <a target="_blank" rel="noopener" href="https://www.autohotkey.com/docs/v2/howto/WriteHotkeys.htm">How to Write Hotkeys | AutoHotkey v2</a>, etc.</p>
-<p>I will also post the scripts I’m using for reference.</p>
-<h3 id="Remapping-Script-for-ThinkPad-Builtin-Keyboard"><a href="#Remapping-Script-for-ThinkPad-Builtin-Keyboard" class="headerlink" title="Remapping Script for ThinkPad Builtin Keyboard"></a>Remapping Script for ThinkPad Builtin Keyboard</h3><figure class="highlight ahk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#Requires AutoHotkey v2.0</span></span><br><span class="line"></span><br><span class="line"><span class="title">LAlt::</span>LCtrl</span><br><span class="line"><span class="title">LCtrl::</span>LAlt</span><br></pre></td></tr></table></figure>
-
-<p>Updated version: <a target="_blank" rel="noopener" href="https://gist.github.com/knwng/9619494c29ae00334270fc87b923e35b">Thinkpad Keyboard Mapping</a></p>
-<h3 id="Remapping-Script-for-HHKB-Builtin-Keyboard"><a href="#Remapping-Script-for-HHKB-Builtin-Keyboard" class="headerlink" title="Remapping Script for HHKB Builtin Keyboard"></a>Remapping Script for HHKB Builtin Keyboard</h3><figure class="highlight ahk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#Requires AutoHotkey v2.0</span></span><br><span class="line"></span><br><span class="line"><span class="comment">; Switch between tabs</span></span><br><span class="line"><span class="comment">; Ctrl + Alt + L/R =&gt; Ctrl + PgDn/PgUp</span></span><br><span class="line"><span class="title">^!Right::</span>Send &#x27;^&#123;PgDn&#125;&#x27;</span><br><span class="line"><span class="title">^!Left::</span>Send &#x27;^&#123;PgUp&#125;&#x27;</span><br><span class="line"></span><br><span class="line"><span class="comment">; Jump a word</span></span><br><span class="line"><span class="comment">; Alt + L/R =&gt; Ctrl + L/R</span></span><br><span class="line"><span class="title">!Left::</span>Send &#x27;^&#123;Left&#125;&#x27;</span><br><span class="line"><span class="title">!Right::</span>Send &#x27;^&#123;Right&#125;&#x27;</span><br><span class="line"></span><br><span class="line"><span class="comment">; Delete a word</span></span><br><span class="line"><span class="comment">; Alt + Backspace =&gt; Ctrl + Backspace</span></span><br><span class="line"><span class="title">!Backspace::</span>Send &#x27;^&#123;Backspace&#125;&#x27;</span><br><span class="line"></span><br><span class="line"><span class="comment">; Switch between virtual desktops</span></span><br><span class="line"><span class="comment">; Ctrl + L/R =&gt; Win + Ctrl + L/R</span></span><br><span class="line"><span class="title">^Left::</span>Send &#x27;#^&#123;Left&#125;&#x27;</span><br><span class="line"><span class="title">^Right::</span>Send &#x27;#^&#123;Right&#125;&#x27;</span><br><span class="line"></span><br><span class="line"><span class="comment">; CMD/Win =&gt; Ctrl</span></span><br><span class="line"><span class="title">LWin::</span>LCtrl</span><br></pre></td></tr></table></figure>
-
-<p>Updated version: <a target="_blank" rel="noopener" href="https://gist.github.com/knwng/b98b72232e98950eb0f9ef293b4ca55f">HHKB keyboard mapping using AutoHotKey</a></p>
-<h3 id="Compile-Scripts-to-Executables"><a href="#Compile-Scripts-to-Executables" class="headerlink" title="Compile Scripts to Executables"></a>Compile Scripts to Executables</h3><p>After writing the scripts, you need to use AutoHotkey to compile it into executable. Then you can apply the remapping by run the executable without logout&#x2F;restart.</p>
-<h1 id="Terminal-and-Shell"><a href="#Terminal-and-Shell" class="headerlink" title="Terminal and Shell"></a>Terminal and Shell</h1><h2 id="WSL"><a href="#WSL" class="headerlink" title="WSL"></a>WSL</h2><p>WSL becomes pretty mature on Windows 11. You can just setup according to the doc: <a target="_blank" rel="noopener" href="https://learn.microsoft.com/en-us/windows/wsl/install">Install WSL | Microsoft Learn</a>.</p>
-<h2 id="WezTerm"><a href="#WezTerm" class="headerlink" title="WezTerm"></a>WezTerm</h2><p>Regarding the terminal, I’m using <a target="_blank" rel="noopener" href="https://wezfurlong.org/wezterm/index.html">WezTerm</a>, a cross-platform terminal so that I can have similar experience on ThinkPad and Macbook.</p>
-<p>We need to apply some configurations to make it easier for use. To do so, you need to create a config file located at <code>C:\Users\&lt;username&gt;\.wezterm.lua</code>(in WSL, it’s <code>/mnt/c/Users/&lt;username&gt;/.wezterm.lua</code>).</p>
-<p>Here’s my configuration:</p>
-<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">local</span> wezterm = <span class="built_in">require</span> <span class="string">&#x27;wezterm&#x27;</span></span><br><span class="line"><span class="keyword">local</span> act = wezterm.action</span><br><span class="line"></span><br><span class="line"><span class="keyword">local</span> <span class="built_in">config</span> = &#123;&#125;</span><br><span class="line"><span class="keyword">if</span> wezterm.config_builder <span class="keyword">then</span></span><br><span class="line">  <span class="built_in">config</span> = wezterm.config_builder()</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">config</span>.color_scheme = <span class="string">&#x27;AdventureTime&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">local</span> dimmer = &#123; brightness = <span class="number">0.1</span> &#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">config</span>.term = <span class="string">&quot;xterm-256color&quot;</span></span><br><span class="line"><span class="built_in">config</span>.front_end = <span class="string">&quot;WebGpu&quot;</span></span><br><span class="line"><span class="built_in">config</span>.webgpu_power_preference = <span class="string">&quot;HighPerformance&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- scroll bar</span></span><br><span class="line"><span class="built_in">config</span>.enable_scroll_bar = <span class="literal">true</span></span><br><span class="line"><span class="built_in">config</span>.min_scroll_bar_height = <span class="string">&quot;3cell&quot;</span></span><br><span class="line"><span class="built_in">config</span>.colors = &#123;</span><br><span class="line">    scrollbar_thumb = <span class="string">&quot;#CCCCCC&quot;</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- tab bar</span></span><br><span class="line"><span class="built_in">config</span>.enable_tab_bar = <span class="literal">true</span></span><br><span class="line"><span class="built_in">config</span>.hide_tab_bar_if_only_one_tab = <span class="literal">false</span></span><br><span class="line"><span class="built_in">config</span>.use_fancy_tab_bar = <span class="literal">true</span></span><br><span class="line"><span class="built_in">config</span>.tab_max_width = <span class="number">25</span></span><br><span class="line"><span class="built_in">config</span>.show_tab_index_in_tab_bar = <span class="literal">true</span></span><br><span class="line"><span class="built_in">config</span>.switch_to_last_active_tab_when_closing_tab = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- cursor</span></span><br><span class="line"><span class="built_in">config</span>.default_cursor_style = <span class="string">&quot;BlinkingBlock&quot;</span></span><br><span class="line"><span class="built_in">config</span>.cursor_blink_ease_in = <span class="string">&quot;Constant&quot;</span></span><br><span class="line"><span class="built_in">config</span>.cursor_blink_ease_out = <span class="string">&quot;Constant&quot;</span></span><br><span class="line"><span class="built_in">config</span>.cursor_blink_rate = <span class="number">700</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- window</span></span><br><span class="line"><span class="built_in">config</span>.window_close_confirmation = <span class="string">&quot;NeverPrompt&quot;</span></span><br><span class="line"><span class="built_in">config</span>.window_padding = &#123; left = <span class="number">0</span>, right = <span class="number">15</span>, top = <span class="number">0</span>, bottom = <span class="number">0</span> &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">-- change config now</span></span><br><span class="line"><span class="built_in">config</span>.default_domain = <span class="string">&#x27;WSL:Ubuntu&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">config</span>.keys = &#123;</span><br><span class="line">  <span class="comment">-- paste from the clipboard</span></span><br><span class="line">  &#123; key = <span class="string">&#x27;V&#x27;</span>, mods = <span class="string">&#x27;CTRL&#x27;</span>, action = act.PasteFrom <span class="string">&#x27;Clipboard&#x27;</span> &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">-- paste from the primary selection</span></span><br><span class="line">  &#123; key = <span class="string">&#x27;V&#x27;</span>, mods = <span class="string">&#x27;CTRL&#x27;</span>, action = act.PasteFrom <span class="string">&#x27;PrimarySelection&#x27;</span> &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">-- close current tab with Ctrl + w</span></span><br><span class="line">  &#123;</span><br><span class="line">    key = <span class="string">&#x27;w&#x27;</span>,</span><br><span class="line">    mods = <span class="string">&#x27;CTRL&#x27;</span>,</span><br><span class="line">    action = act.CloseCurrentTab &#123; confirm = <span class="literal">false</span> &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">-- create new tab with Ctrl + t</span></span><br><span class="line">  &#123;</span><br><span class="line">    key = <span class="string">&#x27;t&#x27;</span>,</span><br><span class="line">    mods = <span class="string">&#x27;CTRL&#x27;</span>,</span><br><span class="line">    action = act.SpawnTab <span class="string">&#x27;CurrentPaneDomain&#x27;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">-- split current tab into 2 panes horizontally with Ctrl + Shift + Alt + %</span></span><br><span class="line">  &#123;</span><br><span class="line">    key = <span class="string">&#x27;%&#x27;</span>,</span><br><span class="line">    mods = <span class="string">&#x27;CTRL|SHIFT|ALT&#x27;</span>,</span><br><span class="line">    action = act.SplitHorizontal &#123; domain = <span class="string">&#x27;CurrentPaneDomain&#x27;</span> &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">-- split current tab into 2 panes vertically with Ctrl + Shift + Alt + &quot;</span></span><br><span class="line">  &#123;</span><br><span class="line">    key = <span class="string">&#x27;&quot;&#x27;</span>,</span><br><span class="line">    mods = <span class="string">&#x27;CTRL|SHIFT|ALT&#x27;</span>,</span><br><span class="line">    action = act.SplitVertical &#123; domain = <span class="string">&#x27;CurrentPaneDomain&#x27;</span> &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">-- navigate between tabs</span></span><br><span class="line">  &#123; key = <span class="string">&#x27;[&#x27;</span>, mods = <span class="string">&#x27;CTRL&#x27;</span>, action = act.ActivateTabRelative(<span class="number">-1</span>) &#125;,</span><br><span class="line">  &#123; key = <span class="string">&#x27;]&#x27;</span>, mods = <span class="string">&#x27;CTRL&#x27;</span>, action = act.ActivateTabRelative(<span class="number">1</span>) &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">-- change font size</span></span><br><span class="line">  &#123; key = <span class="string">&#x27;+&#x27;</span>, mods = <span class="string">&#x27;SHIFT|CTRL&#x27;</span>, action = act.IncreaseFontSize &#125;,</span><br><span class="line">  &#123; key = <span class="string">&#x27;_&#x27;</span>, mods = <span class="string">&#x27;SHIFT|CTRL&#x27;</span>, action = act.DecreaseFontSize &#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="built_in">config</span></span><br></pre></td></tr></table></figure>
-
-<p>You can get the updated configuration from here: <a target="_blank" rel="noopener" href="https://gist.github.com/knwng/4e8f58f15cf9f383547d12fb3f178d0e">My Wez Term config for windows</a>.</p>
-<h2 id="Zsh-oh-my-zsh"><a href="#Zsh-oh-my-zsh" class="headerlink" title="Zsh &amp;&amp; oh-my-zsh"></a>Zsh &amp;&amp; oh-my-zsh</h2><p>I use zsh and oh-my-zsh shell. There are also some useful shortcuts to ease your life.</p>
-<p>You can put these lines into your <code>~/.zshrc</code>:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># jump a word forward/backward with Alt + &lt;-/-&gt;</span></span><br><span class="line"><span class="built_in">bindkey</span> <span class="string">&quot;^[[1;3C&quot;</span> forward-word</span><br><span class="line"><span class="built_in">bindkey</span> <span class="string">&quot;^[[1;3D&quot;</span> backward-word</span><br><span class="line"></span><br><span class="line"><span class="comment"># delete a word with Alt + Backspace</span></span><br><span class="line"><span class="built_in">bindkey</span> <span class="string">&quot;^H&quot;</span> backward-kill-word</span><br></pre></td></tr></table></figure>
-
-<p>Don’t forget to <code>source ~/.zshrc</code> to activate.</p>
-<h1 id="Multiple-Desktops"><a href="#Multiple-Desktops" class="headerlink" title="Multiple Desktops"></a>Multiple Desktops</h1><p>The multi-desktop in macos is extremely convenient. There is also multi-desktop feature on recent Windows distribution(I’m using Win 11, not sure if it exists in Win 10 or prior.), but the behavior is quite different.</p>
-<p>There are two things I’m the most uncomfortable with when I’m using multi-desktop on Windows, but I still have to work them around.</p>
-<h2 id="No-singleton-instance"><a href="#No-singleton-instance" class="headerlink" title="No singleton instance"></a>No singleton instance</h2><p>One is that it can’t keep a singleton instance of application in all the desktops.</p>
-<p>For example, on MacOS, if you click a link on other desktop, it will jump to the desktop containing web browser to open it, instead of create a new browser. But on Windows, it will create a new web browser on current desktop to open the link. So now you have 2 browsers, which makes it fragmental.</p>
-<h2 id="Multi-desktop-multiple-monitors"><a href="#Multi-desktop-multiple-monitors" class="headerlink" title="Multi-desktop + multiple monitors"></a>Multi-desktop + multiple monitors</h2><p>The other thing is, when you are using multi-desktop on multiple monitors(let’s say monitor A, B, C) and you want to switch to another desktop on monitor A, the desktops on monitor B and C will be switched jointly! Surprise!</p>
-<p>Let’s revise what will happen on MacOS. If you switch the desktop on one monitor, you switch the desktop only on that monitor and others remains unchanged.</p>
-<p>I don’t know why it’s designed like that. A possible explanation can be someone needs different combinations of desktops to work on different tasks. For example, they have 1 combination of vscode + terminal + browser, another is movie player + note + music player and they never ever need to use browser + movie player at the same time. Maybe? I don’t know.</p>
-<p>But what I know is, if you want to only change the desktop on 1 monitor and keep others unchanged, you have to mark the other applications <code>Show this window on all desktops</code>. You can find this option by <code>Win + Tab</code> to bring up desktop manager and right-click on the application.</p>
-<p>It’s kind of ugly, personally, but we have to get used to it. If you have better solution, please let me know.</p>
-<h1 id="Other-Useful-Shortcuts"><a href="#Other-Useful-Shortcuts" class="headerlink" title="Other Useful Shortcuts"></a>Other Useful Shortcuts</h1><ol>
-<li>Lock the screen: <code>Win + L</code></li>
-<li>Regional screenshot(like <code>CMD + SHIFT + 4</code> on MacOS): <code>Win + SHIFT + S</code></li>
-<li>Full-screen screenshot(like <code>CMD + SHIFT + 3</code> on MacOS): <code>Win + PrintScreen</code></li>
-<li>Copy&#x2F;Paste on WSL: <code>CTRL + SHIFT + C/V</code></li>
-<li>Emoji list(like <code>CMD + CTRL + Space</code>): <code>Win + .(period)</code></li>
-<li>Switch between virtual desktops: <code>Win + CTRL + &lt;-/-&gt;</code></li>
-</ol>
-<h1 id="In-the-end"><a href="#In-the-end" class="headerlink" title="In the end"></a>In the end</h1><p>Hopefully I will keep updating this post as I keep optimizing the workflow and exploring new tools. Someone suggested we shouldn’t expect same experience on MacOS and Windows, instead, we need to get used to having different workflows. But I still want to know how far it can go.</p>
-
+          <p>Recently, for some reason(sadly), I have to use ThinkPad and Windows for work. It has been a long time since my last time using a Windows laptop. But with some plugins and key remapping, I managed to imitate a mac-like experience on Windows.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/09/29/Make-Your-Win-Behave-Like-Mac-Use-Mac-Magic-Tracepad-and-HHKB-on-a-ThinkPad/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -359,7 +378,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-10-03 10:59:58" itemprop="dateModified" datetime="2024-10-03T10:59:58-07:00">2024-10-03</time>
+                <time title="Modified: 2024-10-11 15:43:05" itemprop="dateModified" datetime="2024-10-11T15:43:05-07:00">2024-10-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -371,7 +390,21 @@
                 </span>
             </span>
 
-          
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>1.5k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>6 mins.</span>
+            </span>
 
         </div>
       </header>
@@ -382,81 +415,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><blockquote>
+          <blockquote>
 <p>This article is a translation by ChatGPT4o, check <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/612380673">this</a> out if you read Chinese.</p>
 </blockquote>
 <h1 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h1><p>When you spawn processes with <code>multiprocessing.Process</code> and select <code>fork</code> as the start method, there are additional operations performed besides just invoking <code>os.fork</code>, such as invoking some after-fork hooks registered by other objects. You can’t trigger these hooks if using <code>os.fork</code> directly, potentially leading to errors.</p>
-<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Recently, I dived a little bit into Python’s multiprocessing module and was impressed by the limitation of it. </p>
-<p>I often heard that for multi-process programming, you should not use <code>os.fork</code> directly but use <code>multiprocessing.Process</code> instead. I never really understood why though. But some popular projects, such as Gunicorn, use <code>os.fork</code> to <a target="_blank" rel="noopener" href="https://github.com/benoitc/gunicorn/blob/master/gunicorn/arbiter.py#L567">spawn child processes</a>.</p>
-<p>I got some insights when solving <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/37692262/python-multiprocessing-assertionerror-can-only-join-a-child-process">this problem</a>, which merely through exceptions during cleanup and does not impact the runtime.</p>
-<p>However, during sick leave, I looked through issues on CPython repository tagged with “expert-multiprocessing” and found an <a target="_blank" rel="noopener" href="https://github.com/python/cpython/issues/101320">interesting issue</a>, where using correct method to start subprocesses or not significantly impacts runtime.</p>
-<h1 id="The-Problem"><a href="#The-Problem" class="headerlink" title="The Problem"></a>The Problem</h1><p>In this issue, the author was trying to</p>
-<ol>
-<li>create a <code>Manager</code> object in the main process;</li>
-<li>create a <code>dict</code> in the <code>Manager</code> process which has a corresponding <code>DictProxy</code> object in the main process and is <strong>initialized</strong>;</li>
-<li>manually serialize the <code>DictProxy</code>;</li>
-<li>fork a child process and restore the <code>DictProxy</code> in the child process;</li>
-<li>access to the dictionary concurrently from both processes.</li>
-</ol>
-<p>Here’s the code:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> multiprocessing.managers <span class="keyword">import</span> SyncManager</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    manager = SyncManager(authkey=<span class="string">b&#x27;test&#x27;</span>)</span><br><span class="line">    manager.start()</span><br><span class="line">    address = manager.address</span><br><span class="line">    d = manager.<span class="built_in">dict</span>()</span><br><span class="line">    pickled_dict = d.__reduce__()</span><br><span class="line">    pickled_dict[<span class="number">1</span>][-<span class="number">1</span>][<span class="string">&quot;authkey&quot;</span>] = <span class="string">b&quot;test&quot;</span></span><br><span class="line">    <span class="built_in">print</span>(pickled_dict)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1000</span>):</span><br><span class="line">        d[i] = i</span><br><span class="line"></span><br><span class="line">    child_id = os.fork()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> child_id != <span class="number">0</span>:</span><br><span class="line">        <span class="comment"># in parent process</span></span><br><span class="line">        <span class="comment"># do something on the proxy object forever</span></span><br><span class="line">        i = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            d[i % <span class="number">1000</span>] = i % <span class="number">3434</span></span><br><span class="line">            i += <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="comment"># in child process</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># connect to manager process</span></span><br><span class="line">        child_manager = SyncManager(address=address, authkey=<span class="string">b&#x27;test&#x27;</span>)</span><br><span class="line">        child_manager.connect()</span><br><span class="line"></span><br><span class="line">        <span class="comment"># rebuild the dictionary proxy</span></span><br><span class="line">        proxy_obj = pickled_dict[<span class="number">0</span>](*pickled_dict[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">        <span class="comment"># read the proxy object forever</span></span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="built_in">list</span>(proxy_obj.values())[:<span class="number">10</span>])</span><br></pre></td></tr></table></figure>
-
-<p>Running this code throws an exception: <code>_pickle.UnpicklingError: invalid load key, &#39;\x0a&#39;</code>.</p>
-<p>The author also provided another code snippet, which didn’t use the standard <code>dict</code> data type, instead, he registered a custom class to the <code>manager</code> and used locks in the member methods of this class. Then the code worked. At the beginning, this information seems useful, but it’s proved to be quite confusing later.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> multiprocessing.managers <span class="keyword">import</span> SyncManager</span><br><span class="line"><span class="keyword">from</span> threading <span class="keyword">import</span> RLock</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SyncedDictionary</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="comment"># store the data in the instance</span></span><br><span class="line">        self.data = &#123;&#125;</span><br><span class="line">        self.lock = RLock()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;init from <span class="subst">&#123;os.getpid()&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">add</span>(<span class="params">self, k, v</span>):</span><br><span class="line">        <span class="keyword">with</span> self.lock:</span><br><span class="line">            self.data[k] = v</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get_values</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">with</span> self.lock:</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">list</span>(self.data.values())</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># custom class</span></span><br><span class="line"></span><br><span class="line">    SyncManager.register(<span class="string">&quot;custom&quot;</span>, SyncedDictionary)</span><br><span class="line">    manager = SyncManager(authkey=<span class="string">b&#x27;test&#x27;</span>)</span><br><span class="line">    manager.start()</span><br><span class="line">    address = manager.address</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;from main pid <span class="subst">&#123;os.getpid()&#125;</span>&quot;</span>)</span><br><span class="line">    custom_dict = manager.custom()</span><br><span class="line">    pickled_dict = custom_dict.__reduce__()</span><br><span class="line">    pickled_dict[<span class="number">1</span>][-<span class="number">1</span>][<span class="string">&quot;authkey&quot;</span>] = <span class="string">b&quot;test&quot;</span></span><br><span class="line">    <span class="built_in">print</span>(pickled_dict)</span><br><span class="line">    child_id = os.fork()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> child_id != <span class="number">0</span>:</span><br><span class="line">        <span class="comment"># in parent, do work on the proxy object forever</span></span><br><span class="line">        i = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            custom_dict.add(i % <span class="number">1000</span>, i % <span class="number">3434</span>)</span><br><span class="line">            i += <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>):</span><br><span class="line">            os.fork() <span class="comment"># even more child processes...</span></span><br><span class="line"></span><br><span class="line">        <span class="built_in">print</span>(os.getpid())</span><br><span class="line">        <span class="comment"># in children</span></span><br><span class="line">        <span class="comment"># connect to manager process</span></span><br><span class="line">        child_manager = SyncManager(address=address, authkey=<span class="string">b&#x27;test&#x27;</span>)</span><br><span class="line">        child_manager.connect()</span><br><span class="line"></span><br><span class="line">        <span class="comment"># rebuild the dictionary proxy</span></span><br><span class="line">        proxy_obj = pickled_dict[<span class="number">0</span>](*pickled_dict[<span class="number">1</span>])</span><br><span class="line">        <span class="comment"># read on the proxy object forever</span></span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            <span class="built_in">list</span>(proxy_obj.get_values())[:<span class="number">10</span>]</span><br></pre></td></tr></table></figure>
-
-<h1 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h1><h2 id="The-Manager"><a href="#The-Manager" class="headerlink" title="The Manager"></a>The Manager</h2><p>In the <code>multiprocessing</code> module, users can create a <code>Manager</code> object in the main process, which will starts a new process(called the manager process), and keeps a proxy object in the main process.</p>
-<p>The proxy communicates with the manager process via sockets (It’s likely using pipes on Windows, but I haven’t looked into it). Objects created through this proxy are actually created in the manager process. The proxy sends instructions to the manager process to control operations like creating objects and calling member methods.</p>
-<p>Other processes can access this object by creating a proxy and connecting to the socket address the manager process is listening on. This design makes it convenient to share objects between different processes.</p>
-<h2 id="Register-Classes-with-Manager"><a href="#Register-Classes-with-Manager" class="headerlink" title="Register Classes with Manager"></a>Register Classes with Manager</h2><p>The standard library has registered some classes ahead, such as <code>dict</code> and <code>Array</code>. Custom classes can also be registered using the <a target="_blank" rel="noopener" href="https://github.com/python/cpython/blob/14e1506a6d7056c38fbbc0797268dcf783f91243/Lib/multiprocessing/managers.py#L701">register</a> method. </p>
-<p>For more details, see the <a target="_blank" rel="noopener" href="https://docs.python.org/3/library/multiprocessing.html">multiprocessing — Process-based parallelism documentation</a>, or better yet, check the source code: <a target="_blank" rel="noopener" href="https://github.com/python/cpython/blob/main/Lib/multiprocessing/managers.py">multiprocessing&#x2F;managers.py</a>.</p>
-<h1 id="Conflicted-Communication-Stream"><a href="#Conflicted-Communication-Stream" class="headerlink" title="Conflicted Communication Stream"></a>Conflicted Communication Stream</h1><p>Based on the exception message, and after debugging, I found that the communication data streams of two processes with the manager process might be mixed, which failed the decoding.</p>
-<p>As mentioned above, the proxy in the main process communicates with the manager process through socket to call methods. But how is this communication created?</p>
-<p>The <a target="_blank" rel="noopener" href="https://github.com/python/cpython/blob/main/Lib/multiprocessing/managers.py#L811"><code>BaseProxy._callmethod</code></a> method, which is used by the proxy to call methods, will first check if there’s an existing connection in its TLS (Thread-Local Storage). If so, just reuse it; otherwise, it will invoke <a target="_blank" rel="noopener" href="https://github.com/python/cpython/blob/main/Lib/multiprocessing/managers.py#L802"><code>BaseProxy._connect</code></a> to establish a new connection:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">_connect</span>(<span class="params">self</span>):</span><br><span class="line">    util.debug(<span class="string">&#x27;making connection to manager&#x27;</span>)</span><br><span class="line">    name = process.current_process().name</span><br><span class="line">    <span class="keyword">if</span> threading.current_thread().name != <span class="string">&#x27;MainThread&#x27;</span>:</span><br><span class="line">        name += <span class="string">&#x27;|&#x27;</span> + threading.current_thread().name</span><br><span class="line">    conn = self._Client(self._token.address, authkey=self._authkey)</span><br><span class="line">    dispatch(conn, <span class="literal">None</span>, <span class="string">&#x27;accept_connection&#x27;</span>, (name,))</span><br><span class="line">    self._tls.connection = conn</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">_callmethod</span>(<span class="params">self, methodname, args=(<span class="params"></span>), kwds=&#123;&#125;</span>):</span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    Try to call a method of the referent and return a copy of the result</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        conn = self._tls.connection</span><br><span class="line">    <span class="keyword">except</span> AttributeError:</span><br><span class="line">        util.debug(<span class="string">&#x27;thread %r does not own a connection&#x27;</span>,</span><br><span class="line">                   threading.current_thread().name)</span><br><span class="line">        self._connect()</span><br><span class="line">        conn = self._tls.connection</span><br><span class="line"></span><br><span class="line">    conn.send((self._<span class="built_in">id</span>, methodname, args, kwds))</span><br><span class="line">    kind, result = conn.recv()</span><br></pre></td></tr></table></figure>
-
-<p><a target="_blank" rel="noopener" href="https://github.com/python/cpython/blob/main/Lib/multiprocessing/managers.py#L761">This</a> describes how to reuse the connection in TLS:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, token, serializer, manager=<span class="literal">None</span>, authkey=<span class="literal">None</span>, exposed=<span class="literal">None</span>, incref=<span class="literal">True</span>, manager_owned=<span class="literal">False</span></span>):</span><br><span class="line">    <span class="keyword">with</span> BaseProxy._mutex:</span><br><span class="line">        tls_idset = BaseProxy._address_to_local.get(token.address, <span class="literal">None</span>)</span><br><span class="line">        <span class="keyword">if</span> tls_idset <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">            tls_idset = util.ForkAwareLocal(), ProcessLocalSet()</span><br><span class="line">            BaseProxy._address_to_local[token.address] = tls_idset</span><br><span class="line">    self._tls = tls_idset[<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
-
-<p>We can see that <code>self._tls</code> is of type <code>util.ForkAwareLocal</code>, a subclass of <code>threading.local</code>, which is stored in TLS and defined as:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ForkAwareLocal</span>(threading.local):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        register_after_fork(self, <span class="keyword">lambda</span> obj : obj.__dict__.clear())</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__reduce__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">type</span>(self), ()</span><br></pre></td></tr></table></figure>
-
-<p>During forking, the TLS data in parent process <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/60807085/does-data-stored-in-threading-local-get-passed-to-child-processes-started-with-p/60807086#60807086">is copied to the child process</a>. If a connection has already been created before forking, both parent and child processes will communicate through the same socket, which causes conflicts.</p>
-<h1 id="Why-multiprocessing-Process-works-fine"><a href="#Why-multiprocessing-Process-works-fine" class="headerlink" title="Why multiprocessing.Process works fine?"></a>Why multiprocessing.Process works fine?</h1><p>How does <code>multiprocessing.Process</code> avoid this problem?</p>
-<p>Through the definition of <code>ForkAwareLocal</code>, we can see that it registers a lambda function (<code>lambda obj: obj.__dict__.clear()</code>) via <code>register_after_fork</code> in its constructor. This lambda function clears the object’s <code>__dict__</code>, which stores attributes.</p>
-<p><code>register_after_fork</code> registers functions to a global registry named <code>_afterfork_registry</code>. And these functions are called sequentially in <code>_run_after_forkers</code></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">_afterfork_registry = weakref.WeakValueDictionary()</span><br><span class="line">_afterfork_counter = itertools.count()</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">_run_after_forkers</span>():</span><br><span class="line">    items = <span class="built_in">list</span>(_afterfork_registry.items())</span><br><span class="line">    items.sort()</span><br><span class="line">    <span class="keyword">for</span> (index, ident, func), obj <span class="keyword">in</span> items:</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            func(obj)</span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">            info(<span class="string">&#x27;after forker raised exception %s&#x27;</span>, e)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">register_after_fork</span>(<span class="params">obj, func</span>):</span><br><span class="line">    _afterfork_registry[(<span class="built_in">next</span>(_afterfork_counter), <span class="built_in">id</span>(obj), func)] = obj</span><br></pre></td></tr></table></figure>
-
-<p>To summarize, as long as we trigger the hook function registered by <code>ForkAwareLocal</code>(the lambda function) by calling <code>_run_after_forkers</code>, we can clear the attributes in <code>self._tls</code>. Then when we invoke <code>_callmethod</code>, it will raise <code>AttributeError</code> and prompt the proxy to create a new connection to the manager process. Then there will be no conflict since processes no long use the same connection now.</p>
-<p>But who calls this <code>_run_after_forkers</code>? A global search indicates that it’s in <code>BaseProcess._after_fork</code>. And <code>BaseProcess</code> is the superclass of <code>multiprocessing.Process</code>.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@staticmethod</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">_after_fork</span>():</span><br><span class="line">    <span class="keyword">from</span> . <span class="keyword">import</span> util</span><br><span class="line">    util._finalizer_registry.clear()</span><br><span class="line">    util._run_after_forkers()</span><br></pre></td></tr></table></figure>
-
-<p>If interested, you can dive deep. The entire invoke chain is:</p>
-<ul>
-<li><code>multiprocessing.context.Process.start</code></li>
-<li><code>multiprocessing.process.BaseProcess.start</code></li>
-<li><code>multiprocessing.context.Process._Popen</code></li>
-<li><code>multiprocessing.context.ForkProcess._Popen</code></li>
-<li><code>multiprocessing.popen_fork.Popen._launch</code></li>
-<li><code>multiprocessing.process.BaseProcess._bootstrap</code></li>
-<li><code>multiprocessing.process.BaseProcess.after_fork</code></li>
-</ul>
-<p>Only when you use <code>multiprocessing.Process</code> to spawn a process, the attributes in <code>self._tls</code> can be cleared by the hook and conflicts can be avoided.</p>
-<h1 id="Solutions"><a href="#Solutions" class="headerlink" title="Solutions"></a>Solutions</h1><p>Knowing the cause, I prompted several solutions (all based on the author’s first code snippet in the Github issue):</p>
-<h2 id="1-Manually-update-the-connection"><a href="#1-Manually-update-the-connection" class="headerlink" title="1. Manually update the connection"></a>1. Manually update the connection</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">proxy_obj = pickled_dict[<span class="number">0</span>](*pickled_dict[<span class="number">1</span>])</span><br><span class="line">proxy_obj._connect() <span class="comment"># create new conn</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="2-Manually-call-the-hook-function"><a href="#2-Manually-call-the-hook-function" class="headerlink" title="2. Manually call the hook function"></a>2. Manually call the hook function</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> multiprocessing.util <span class="keyword">import</span> _run_after_forkers</span><br><span class="line"></span><br><span class="line">pid = os.fork()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> pid == <span class="number">0</span>:</span><br><span class="line">    <span class="comment"># in child</span></span><br><span class="line">    _run_after_forkers()</span><br></pre></td></tr></table></figure>
-
-<h2 id="Use-multiprocessing-Process-instead-of-os-fork"><a href="#Use-multiprocessing-Process-instead-of-os-fork" class="headerlink" title="Use multiprocessing.Process instead of os.fork"></a>Use <code>multiprocessing.Process</code> instead of <code>os.fork</code></h2><p>Just follow the documents. Note that the proxy objects can be passed to <code>Process</code> as parameters.</p>
-<h1 id="Debugging-Tips"><a href="#Debugging-Tips" class="headerlink" title="Debugging Tips"></a>Debugging Tips</h1><p>You can use this snippet to set the multiprocessing internal logger’s level to debug to print more information without modifying the source code:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"><span class="keyword">from</span> multiprocessing.util <span class="keyword">import</span> log_to_stderr</span><br><span class="line"></span><br><span class="line">log_to_stderr(logging.DEBUG)</span><br></pre></td></tr></table></figure>
-
-<h1 id="PS"><a href="#PS" class="headerlink" title="PS"></a>PS</h1><p>Why did I say the author’s second example is somehow confusing?</p>
-<p>Because the essential difference between the two code snippets is not that one uses a built-in type and the other a custom type. The key is that the first assigns values to the shared object before forking which generates a connection in TLS. The second does not assign values before forking. If you add an assignment before forking in the second snippet, you will get the same result:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1000</span>):</span><br><span class="line">    custom_dict.add(i, i) </span><br></pre></td></tr></table></figure>
-
-<h1 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h1><p>Multi-process programming in Python is not a very pleasant thing to do, due to a lack of detailed documents and you have to dive into source code. Moreover, in order to avoid resource leaks, the <code>multiprocessing</code> module has many built-in hooks and additional processes to manage resources, which weakens developers’ abilities to manage them precisely.</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/06/06/Python-Multiprocessing-Another-Reason-to-Use-multiprocessing-Process-Instead-of-os-fork/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -506,7 +476,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-10-03 10:59:58" itemprop="dateModified" datetime="2024-10-03T10:59:58-07:00">2024-10-03</time>
+                <time title="Modified: 2024-10-11 15:43:12" itemprop="dateModified" datetime="2024-10-11T15:43:12-07:00">2024-10-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -518,7 +488,21 @@
                 </span>
             </span>
 
-          
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>884</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>3 mins.</span>
+            </span>
 
         </div>
       </header>
@@ -529,48 +513,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><blockquote><p>This article is a translation by ChatGPT4o, check <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/343562875">this</a> out if you read Chinese.</p>
+          <blockquote><p>This article is a translation by ChatGPT4o, check <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/343562875">this</a> out if you read Chinese.</p>
 </blockquote>
 
 
 <p>A few days ago, while reading about JARM, a novel TLS server fingerprinting tool proposed by <a target="_blank" rel="noopener" href="https://engineering.salesforce.com/easily-identify-malicious-servers-on-the-internet-with-jarm-e095edac525a">Salesforce</a>, I noticed they used a <code>choose_grease()</code> function when constructing the TLS ClientHello record, which drove me to look into this GREASE mechanism.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Randomly choose a grease value</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">choose_grease</span>():</span><br><span class="line">    grease_list = [<span class="string">b&quot;\x0a\x0a&quot;</span>, <span class="string">b&quot;\x1a\x1a&quot;</span>, <span class="string">b&quot;\x2a\x2a&quot;</span>, <span class="string">b&quot;\x3a\x3a&quot;</span>, <span class="string">b&quot;\x4a\x4a&quot;</span>, <span class="string">b&quot;\x5a\x5a&quot;</span>, <span class="string">b&quot;\x6a\x6a&quot;</span>, <span class="string">b&quot;\x7a\x7a&quot;</span>, <span class="string">b&quot;\x8a\x8a&quot;</span>, <span class="string">b&quot;\x9a\x9a&quot;</span>, <span class="string">b&quot;\xaa\xaa&quot;</span>, <span class="string">b&quot;\xba\xba&quot;</span>, <span class="string">b&quot;\xca\xca&quot;</span>, <span class="string">b&quot;\xda\xda&quot;</span>, <span class="string">b&quot;\xea\xea&quot;</span>, <span class="string">b&quot;\xfa\xfa&quot;</span>]</span><br><span class="line">    <span class="keyword">return</span> random.choice(grease_list)</span><br></pre></td></tr></table></figure>
-
-<h1 id="What-is-GREASE"><a href="#What-is-GREASE" class="headerlink" title="What is GREASE?"></a>What is GREASE?</h1><p>GREASE stands for Generate Random Extensions And Sustain Extensibility, which was formally defined in <a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc8701">RFC8701</a>. It’s a special mechanism to mitigate the difficulty in extending the TLS protocol in the future.</p>
-<p>For those familiar with TLS, you know that during the handshake phase, the client first sends a ClientHello record to the server, which includes supported TLS versions, CipherSuites types, and some extensions. If the server can process this, it returns a ServerHello record with the chosen CipherSuite and some extensions. For extensibility, some values for cipher and extension fields are reserved for future use. For example, <a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc5246">TLSv1.2</a> introduced AEAD-type ciphers.</p>
-<p>Similarly, GREASE limits certain reserved values for these parameters, called GREASE values, which currently hold no meaning in the TLS protocol. For instance, GREASE values for CipherSuites and the Application-Layer Protocol Negotiation (ALPN) extension include:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;0x0A,0x0A&#125;, &#123;0x1A,0x1A&#125;, &#123;0x2A,0x2A&#125;, &#123;0x3A,0x3A&#125;, &#123;0x4A,0x4A&#125;, &#123;0x5A,0x5A&#125;, &#123;0x6A,0x6A&#125;, &#123;0x7A,0x7A&#125;, &#123;0x8A,0x8A&#125;, &#123;0x9A,0x9A&#125;, &#123;0xAA,0xAA&#125;, &#123;0xBA,0xBA&#125;, &#123;0xCA,0xCA&#125;, &#123;0xDA,0xDA&#125;, &#123;0xEA,0xEA&#125;, &#123;0xFA,0xFA&#125;</span><br></pre></td></tr></table></figure>
-
-<p>The protocol specifies that when the client sends a ClientHello, it <strong>may</strong> select one or more GREASE values to be sent to the server.</p>
-<blockquote>
-<p>A client MAY select one or more GREASE cipher suite values and advertise them in the “cipher_suites” field.</p>
-</blockquote>
-<p>If the client receives a record from the server (e.g. ServerHello, Certificate, EncryptedExtensions, etc.) containing a GREASE value, it <strong>must</strong> reject the record and close the connection.</p>
-<blockquote>
-<p>Clients MUST reject GREASE values when negotiated by the server. In particular, the client MUST fail the connection if a GREASE value appears in any of the following</p>
-</blockquote>
-<p>Furthermore, when the server finds GREASE values in ClientHello:</p>
-<ol>
-<li>It <strong>must not</strong> use these GREASE values for further negotiation and must treat them as ordinary reserved values.</li>
-<li>It <strong>must</strong> ignore these values and use other available values in this field for negotiation.</li>
-</ol>
-<blockquote>
-<p>When processing a ClientHello, servers MUST NOT treat GREASE values differently from any unknown value. Servers MUST NOT negotiate any GREASE value when offered in a ClientHello. Servers MUST correctly ignore unknown values in a ClientHello and attempt to negotiate with one of the remaining parameters. (There may not be any known parameters remaining, in which case parameter negotiation will fail.)</p>
-</blockquote>
-<p>This is a brilliant design, akin to a prisoner’s dilemma. Every TLS library could be used both as a client or as a server. Given that there are several popular TLS libraries, there’s a great chance that the libraries used by the client and the server are different, which forces them to agree on this convention.</p>
-<p>Similarly, for parameters initially sent by the server, the RFC stipulates the behavior of the client and server.</p>
-<h1 id="Why-do-we-need-GREASE"><a href="#Why-do-we-need-GREASE" class="headerlink" title="Why do we need GREASE?"></a>Why do we need GREASE?</h1><p>One might wonder: if we want to reserve these values in the protocol, why don’t we just write them down in the protocol?</p>
-<p>This mechanism is based on practical considerations. Although RFCs are well-known and authoritative, they are merely standards made by the community. To be used in practice, they need to be implemented in libraries (such as OpenSSL, BoringSSL, etc.). In this conversion, the logic may deviate from the designer’s intent. This can cause significant problems for foundational network protocols deployed on a large scale, e.g. TLS.</p>
-<p>In the case of TLS, if we don’t have GREASE to constrain the implementations, libraries may only support the values in the current protocol and throw exceptions for unknown values.</p>
-<p>Although this implementation may work perfectly with the current protocol, when the IETF decides to upgrade it to have more CipherSuites values, libraries of newer protocol may fail to interact with older ones, hindering the deployment of the new protocol.</p>
-<p>It’s worth mentioning that GREASE values were initially set for the Version parameter, but it was removed in the final RFC.</p>
-<blockquote>
-<p>The values allocated above are thus no longer available for use as TLS or DTLS [RFC6347] version numbers.</p>
-</blockquote>
-<p>Therefore, in TLSv1.3, they have to use <code>supported_versions</code> extension to indicate the support for TLSv1.3, instead of using Version parameter, so that they can be compliant with TLSv1.2. For more details, see this Cloudflare <a target="_blank" rel="noopener" href="https://blog.cloudflare.com/why-tls-1-3-isnt-in-browsers-yet/">blog</a>.</p>
-<h1 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h1><p>In a large-scale system like the Internet, changes are difficult and always take a long time. The deployment and upgrade of foundational network protocols are among these challenges. Many protocols seem straightforward at first glances, but you can learn something when you dive deep.</p>
-<!-- # References -->
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/06/06/The-GREASE-Mechanism-in-TLS/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -620,10 +575,24 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-10-03 10:59:58" itemprop="dateModified" datetime="2024-10-03T10:59:58-07:00">2024-10-03</time>
+                <time title="Modified: 2024-10-11 15:43:37" itemprop="dateModified" datetime="2024-10-11T15:43:37-07:00">2024-10-11</time>
               </span>
 
-          
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>65</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
 
         </div>
       </header>
@@ -718,15 +687,13 @@
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">4</span>
+          <a href="/archives">
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
-          
         <span class="site-state-item-count">1</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
@@ -772,11 +739,43 @@
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Kyle Wang</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">Symbols count total: </span>
+    <span title="Symbols count total">4k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">Reading time total &asymp;</span>
+    <span title="Reading time total">15 mins.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
   </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 

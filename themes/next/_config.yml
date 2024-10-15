@@ -89,7 +89,7 @@ footer:
 creative_commons:
   license: by-nc-sa
   sidebar: false
-  post: false
+  post: true
   language:
 
 
@@ -104,7 +104,7 @@ scheme: Pisces
 #scheme: Gemini
 
 # Dark Mode
-darkmode: false
+darkmode: true
 
 
 # ---------------------------------------------------------------
@@ -117,14 +117,15 @@ darkmode: false
 # When running the site in a subdirectory (e.g. yoursite.com/blog), remove the leading slash from link value (/archives -> archives).
 # External url should start with http:// or https://
 menu:
-  home: / || home
-  about: /about/ || user
+  Home: / || home
+  About: /about/ || user
   #tags: /tags/ || tags
-  categories: /categories/ || th
-  archives: /archives/ || archive
+  Categories: /categories/ || th
+  Archives: /archives/ || archive
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
+  RSS: /atom.xml || fa fa-rss
 
 # Enable / Disable menu icons / item badges.
 menu_settings:
@@ -253,7 +254,7 @@ post_meta:
 symbols_count_time:
   separated_meta: true
   item_text_post: true
-  item_text_total: false
+  item_text_total: true
 
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
 tag_icon: false
@@ -355,14 +356,20 @@ codeblock:
   # Code Highlight theme
   # Available values: normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic
   # See: https://github.com/chriskempson/tomorrow-theme
-  highlight_theme: normal
+  # highlight_theme: normal
   # Add copy button on codeblock
+  theme:
+    light: default
+    dark: tomorrow-night
+  prism:
+    light: prism
+    dark: prism-dark
   copy_button:
     enable: true
     # Show text copy result.
     show_result: true
     # Available values: default | flat | mac
-    style:
+    style: default
 
 back2top:
   enable: true
@@ -712,7 +719,7 @@ firestore:
 # Show Views / Visitors of the website / page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi
 busuanzi_count:
-  enable: false
+  enable: true
   total_visitors: true
   total_visitors_icon: user
   total_views: true

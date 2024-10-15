@@ -16,6 +16,8 @@ date: 2024-06-06 22:34:44
 # TL;DR
 When you spawn processes with `multiprocessing.Process` and select `fork` as the start method, there are additional operations performed besides just invoking `os.fork`, such as invoking some after-fork hooks registered by other objects. You can't trigger these hooks if using `os.fork` directly, potentially leading to errors.
 
+<!-- more -->
+
 # Introduction
 Recently, I dived a little bit into Python's multiprocessing module and was impressed by the limitation of it. 
 

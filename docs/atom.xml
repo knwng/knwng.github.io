@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Kyle&#39;s Personal Website</title>
+  <icon>http://骞.wang/icon.png</icon>
+  
+  <link href="http://骞.wang/atom.xml" rel="self"/>
+  
+  <link href="http://骞.wang/"/>
+  <updated>2024-10-15T05:58:39.303Z</updated>
+  <id>http://骞.wang/</id>
+  
+  <author>
+    <name>Kyle Wang</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Package Conflict of Triton in PyTorch ROCm PYPI Distribution</title>
+    <link href="http://骞.wang/2024/10/14/Package-Conflict-of-Triton-in-PyTorch-ROCm-PYPI-Distribution/"/>
+    <id>http://骞.wang/2024/10/14/Package-Conflict-of-Triton-in-PyTorch-ROCm-PYPI-Distribution/</id>
+    <published>2024-10-15T05:58:39.000Z</published>
+    <updated>2024-10-15T05:58:39.303Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;TL-DR&quot;&gt;&lt;a href=&quot;#TL-DR&quot; class=&quot;headerlink&quot; title=&quot;TL;DR&quot;&gt;&lt;/a&gt;TL;DR&lt;/h1&gt;&lt;p&gt;When you install PyTorch on the ROCm platform for an AMD GPU, a &lt;code&gt;pytorch-triton-rocm&lt;/code&gt; package will be installed along with it. If you also install Triton at the same time, you may encounter a version conflict, which can be tricky to resolve.&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Make Your Win Behave Like Mac: Use Mac Magic TracePad and HHKB on a ThinkPad</title>
+    <link href="http://骞.wang/2024/09/29/Make-Your-Win-Behave-Like-Mac-Use-Mac-Magic-Tracepad-and-HHKB-on-a-ThinkPad/"/>
+    <id>http://骞.wang/2024/09/29/Make-Your-Win-Behave-Like-Mac-Use-Mac-Magic-Tracepad-and-HHKB-on-a-ThinkPad/</id>
+    <published>2024-09-29T22:41:26.000Z</published>
+    <updated>2024-10-11T22:42:58.288Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Recently, for some reason(sadly), I have to use ThinkPad and Windows for work. It has been a long time since my last time using a Windows laptop. But with some plugins and key remapping, I managed to imitate a mac-like experience on Windows.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="tech" scheme="http://骞.wang/categories/tech/"/>
+    
+    
+    <category term="mac" scheme="http://骞.wang/tags/mac/"/>
+    
+    <category term="ease-of-use" scheme="http://骞.wang/tags/ease-of-use/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python Multiprocessing: Another Reason to Use multiprocessing.Process Instead of os.fork</title>
+    <link href="http://骞.wang/2024/06/06/Python-Multiprocessing-Another-Reason-to-Use-multiprocessing-Process-Instead-of-os-fork/"/>
+    <id>http://骞.wang/2024/06/06/Python-Multiprocessing-Another-Reason-to-Use-multiprocessing-Process-Instead-of-os-fork/</id>
+    <published>2024-06-07T05:34:44.000Z</published>
+    <updated>2024-10-11T22:43:05.035Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;This article is a translation by ChatGPT4o, check &lt;a href=&quot;https://zhuanlan.zhihu.com/p/612380673&quot;&gt;this&lt;/a&gt; out if you read Chinese.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;TL-DR&quot;&gt;&lt;a href=&quot;#TL-DR&quot; class=&quot;headerlink&quot; title=&quot;TL;DR&quot;&gt;&lt;/a&gt;TL;DR&lt;/h1&gt;&lt;p&gt;When you spawn processes with &lt;code&gt;multiprocessing.Process&lt;/code&gt; and select &lt;code&gt;fork&lt;/code&gt; as the start method, there are additional operations performed besides just invoking &lt;code&gt;os.fork&lt;/code&gt;, such as invoking some after-fork hooks registered by other objects. You can’t trigger these hooks if using &lt;code&gt;os.fork&lt;/code&gt; directly, potentially leading to errors.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="tech" scheme="http://骞.wang/categories/tech/"/>
+    
+    
+    <category term="python" scheme="http://骞.wang/tags/python/"/>
+    
+    <category term="multi-process" scheme="http://骞.wang/tags/multi-process/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>The GREASE Mechanism in TLS</title>
+    <link href="http://骞.wang/2024/06/06/The-GREASE-Mechanism-in-TLS/"/>
+    <id>http://骞.wang/2024/06/06/The-GREASE-Mechanism-in-TLS/</id>
+    <published>2024-06-06T18:28:59.000Z</published>
+    <updated>2024-10-11T22:43:12.362Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;&lt;p&gt;This article is a translation by ChatGPT4o, check &lt;a href=&quot;https://zhuanlan.zhihu.com/p/343562875&quot;&gt;this&lt;/a&gt; out if you read Chinese.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+&lt;p&gt;A few days ago, while reading about JARM, a novel TLS server fingerprinting tool proposed by &lt;a href=&quot;https://engineering.salesforce.com/easily-identify-malicious-servers-on-the-internet-with-jarm-e095edac525a&quot;&gt;Salesforce&lt;/a&gt;, I noticed they used a &lt;code&gt;choose_grease()&lt;/code&gt; function when constructing the TLS ClientHello record, which drove me to look into this GREASE mechanism.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="tech" scheme="http://骞.wang/categories/tech/"/>
+    
+    
+    <category term="tls" scheme="http://骞.wang/tags/tls/"/>
+    
+    <category term="security" scheme="http://骞.wang/tags/security/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>About Me</title>
+    <link href="http://骞.wang/2024/04/01/first-post/"/>
+    <id>http://骞.wang/2024/04/01/first-post/</id>
+    <published>2024-04-02T06:08:11.000Z</published>
+    <updated>2024-10-11T22:43:37.344Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;My name is Qian Wang(pronounced</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>

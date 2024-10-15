@@ -15,6 +15,8 @@ This article is a translation by ChatGPT4o, check [this](https://zhuanlan.zhihu.
 
 A few days ago, while reading about JARM, a novel TLS server fingerprinting tool proposed by [Salesforce], I noticed they used a `choose_grease()` function when constructing the TLS ClientHello record, which drove me to look into this GREASE mechanism.
 
+<!-- more -->
+
 ```python
 # Randomly choose a grease value
 def choose_grease():
