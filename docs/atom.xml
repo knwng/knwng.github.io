@@ -6,7 +6,7 @@
   <link href="http://骞.wang/atom.xml" rel="self"/>
   
   <link href="http://骞.wang/"/>
-  <updated>2024-10-15T05:58:39.303Z</updated>
+  <updated>2024-12-25T10:01:19.227Z</updated>
   <id>http://骞.wang/</id>
   
   <author>
@@ -17,9 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>How to Compile Triton Kernels Without GPU</title>
+    <link href="http://骞.wang/2024/12/26/How-to-compile-kernels-without-GPU-in-Triton/"/>
+    <id>http://骞.wang/2024/12/26/How-to-compile-kernels-without-GPU-in-Triton/</id>
+    <published>2024-12-26T01:50:42.000Z</published>
+    <updated>2024-12-25T10:01:19.227Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Recently, I encountered a situation where I needed to contribute to Triton without access to any GPU.&lt;br&gt;The only device I had was my M3 Mac. After some experimentation, it turns out that Triton has a well-designed abstraction layer, and you don’t need a GPU if you only want to work at the compiler level (i.e., MLIR and LLVM).&lt;/p&gt;
+&lt;p&gt;The method is present in the codebase, but it’s not officially documented. I hope this guide will save someone else’s time.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="tech" scheme="http://骞.wang/categories/tech/"/>
+    
+    
+    <category term="triton" scheme="http://骞.wang/tags/triton/"/>
+    
+    <category term="ml" scheme="http://骞.wang/tags/ml/"/>
+    
+    <category term="ai" scheme="http://骞.wang/tags/ai/"/>
+    
+    <category term="compiler" scheme="http://骞.wang/tags/compiler/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Package Conflict of Triton in PyTorch ROCm PYPI Distribution</title>
-    <link href="http://骞.wang/2024/10/14/Package-Conflict-of-Triton-in-PyTorch-ROCm-PYPI-Distribution/"/>
-    <id>http://骞.wang/2024/10/14/Package-Conflict-of-Triton-in-PyTorch-ROCm-PYPI-Distribution/</id>
+    <link href="http://骞.wang/2024/10/15/Package-Conflict-of-Triton-in-PyTorch-ROCm-PYPI-Distribution/"/>
+    <id>http://骞.wang/2024/10/15/Package-Conflict-of-Triton-in-PyTorch-ROCm-PYPI-Distribution/</id>
     <published>2024-10-15T05:58:39.000Z</published>
     <updated>2024-10-15T05:58:39.303Z</updated>
     
@@ -33,8 +59,8 @@
   
   <entry>
     <title>Make Your Win Behave Like Mac: Use Mac Magic TracePad and HHKB on a ThinkPad</title>
-    <link href="http://骞.wang/2024/09/29/Make-Your-Win-Behave-Like-Mac-Use-Mac-Magic-Tracepad-and-HHKB-on-a-ThinkPad/"/>
-    <id>http://骞.wang/2024/09/29/Make-Your-Win-Behave-Like-Mac-Use-Mac-Magic-Tracepad-and-HHKB-on-a-ThinkPad/</id>
+    <link href="http://骞.wang/2024/09/30/Make-Your-Win-Behave-Like-Mac-Use-Mac-Magic-Tracepad-and-HHKB-on-a-ThinkPad/"/>
+    <id>http://骞.wang/2024/09/30/Make-Your-Win-Behave-Like-Mac-Use-Mac-Magic-Tracepad-and-HHKB-on-a-ThinkPad/</id>
     <published>2024-09-29T22:41:26.000Z</published>
     <updated>2024-10-11T22:42:58.288Z</updated>
     
@@ -54,8 +80,8 @@
   
   <entry>
     <title>Python Multiprocessing: Another Reason to Use multiprocessing.Process Instead of os.fork</title>
-    <link href="http://骞.wang/2024/06/06/Python-Multiprocessing-Another-Reason-to-Use-multiprocessing-Process-Instead-of-os-fork/"/>
-    <id>http://骞.wang/2024/06/06/Python-Multiprocessing-Another-Reason-to-Use-multiprocessing-Process-Instead-of-os-fork/</id>
+    <link href="http://骞.wang/2024/06/07/Python-Multiprocessing-Another-Reason-to-Use-multiprocessing-Process-Instead-of-os-fork/"/>
+    <id>http://骞.wang/2024/06/07/Python-Multiprocessing-Another-Reason-to-Use-multiprocessing-Process-Instead-of-os-fork/</id>
     <published>2024-06-07T05:34:44.000Z</published>
     <updated>2024-10-11T22:43:05.035Z</updated>
     
@@ -78,8 +104,8 @@
   
   <entry>
     <title>The GREASE Mechanism in TLS</title>
-    <link href="http://骞.wang/2024/06/06/The-GREASE-Mechanism-in-TLS/"/>
-    <id>http://骞.wang/2024/06/06/The-GREASE-Mechanism-in-TLS/</id>
+    <link href="http://骞.wang/2024/06/07/The-GREASE-Mechanism-in-TLS/"/>
+    <id>http://骞.wang/2024/06/07/The-GREASE-Mechanism-in-TLS/</id>
     <published>2024-06-06T18:28:59.000Z</published>
     <updated>2024-10-11T22:43:12.362Z</updated>
     
@@ -103,8 +129,8 @@
   
   <entry>
     <title>About Me</title>
-    <link href="http://骞.wang/2024/04/01/first-post/"/>
-    <id>http://骞.wang/2024/04/01/first-post/</id>
+    <link href="http://骞.wang/2024/04/02/first-post/"/>
+    <id>http://骞.wang/2024/04/02/first-post/</id>
     <published>2024-04-02T06:08:11.000Z</published>
     <updated>2024-10-11T22:43:37.344Z</updated>
     

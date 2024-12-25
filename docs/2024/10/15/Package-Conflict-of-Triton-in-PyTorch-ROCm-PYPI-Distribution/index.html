@@ -20,21 +20,19 @@
     var CONFIG = {"hostname":"xn--jh6a.wang","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="This article is a translation by ChatGPT4o, check this out if you read Chinese.    A few days ago, while reading about JARM, a novel TLS server fingerprinting tool proposed by Salesforce, I noticed th">
+  <meta name="description" content="TL;DRWhen you install PyTorch on the ROCm platform for an AMD GPU, a pytorch-triton-rocm package will be installed along with it. If you also install Triton at the same time, you may encounter a versi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="The GREASE Mechanism in TLS">
-<meta property="og:url" content="http://骞.wang/2024/06/06/The-GREASE-Mechanism-in-TLS/index.html">
+<meta property="og:title" content="Package Conflict of Triton in PyTorch ROCm PYPI Distribution">
+<meta property="og:url" content="http://骞.wang/2024/10/15/Package-Conflict-of-Triton-in-PyTorch-ROCm-PYPI-Distribution/index.html">
 <meta property="og:site_name" content="Kyle&#39;s Personal Website">
-<meta property="og:description" content="This article is a translation by ChatGPT4o, check this out if you read Chinese.    A few days ago, while reading about JARM, a novel TLS server fingerprinting tool proposed by Salesforce, I noticed th">
+<meta property="og:description" content="TL;DRWhen you install PyTorch on the ROCm platform for an AMD GPU, a pytorch-triton-rocm package will be installed along with it. If you also install Triton at the same time, you may encounter a versi">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-06-06T18:28:59.000Z">
-<meta property="article:modified_time" content="2024-10-11T22:43:12.362Z">
+<meta property="article:published_time" content="2024-10-15T05:58:39.000Z">
+<meta property="article:modified_time" content="2024-10-15T05:58:39.303Z">
 <meta property="article:author" content="Kyle Wang">
-<meta property="article:tag" content="tls">
-<meta property="article:tag" content="security">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://骞.wang/2024/06/06/The-GREASE-Mechanism-in-TLS/">
+<link rel="canonical" href="http://骞.wang/2024/10/15/Package-Conflict-of-Triton-in-PyTorch-ROCm-PYPI-Distribution/">
 
 
 <script id="page-configurations">
@@ -47,7 +45,7 @@
   };
 </script>
 
-  <title>The GREASE Mechanism in TLS | Kyle's Personal Website</title>
+  <title>Package Conflict of Triton in PyTorch ROCm PYPI Distribution | Kyle's Personal Website</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1HW3BHV24S"></script>
     <script>
@@ -180,7 +178,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://骞.wang/2024/06/06/The-GREASE-Mechanism-in-TLS/">
+    <link itemprop="mainEntityOfPage" href="http://骞.wang/2024/10/15/Package-Conflict-of-Triton-in-PyTorch-ROCm-PYPI-Distribution/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -193,7 +191,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          The GREASE Mechanism in TLS
+          Package Conflict of Triton in PyTorch ROCm PYPI Distribution
         </h1>
 
         <div class="post-meta">
@@ -203,23 +201,7 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2024-06-06 11:28:59" itemprop="dateCreated datePublished" datetime="2024-06-06T11:28:59-07:00">2024-06-06</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-10-11 15:43:12" itemprop="dateModified" datetime="2024-10-11T15:43:12-07:00">2024-10-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/tech/" itemprop="url" rel="index"><span itemprop="name">tech</span></a>
-                </span>
+              <time title="Created: 2024-10-14 22:58:39" itemprop="dateCreated datePublished" datetime="2024-10-14T22:58:39-07:00">2024-10-14</time>
             </span>
 
           
@@ -235,14 +217,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>884</span>
+              <span>184</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>3 mins.</span>
+              <span>1 mins.</span>
             </span>
 
         </div>
@@ -254,49 +236,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><blockquote><p>This article is a translation by ChatGPT4o, check <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/343562875">this</a> out if you read Chinese.</p>
-</blockquote>
-
-
-<p>A few days ago, while reading about JARM, a novel TLS server fingerprinting tool proposed by <a target="_blank" rel="noopener" href="https://engineering.salesforce.com/easily-identify-malicious-servers-on-the-internet-with-jarm-e095edac525a">Salesforce</a>, I noticed they used a <code>choose_grease()</code> function when constructing the TLS ClientHello record, which drove me to look into this GREASE mechanism.</p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h1><p>When you install PyTorch on the ROCm platform for an AMD GPU, a <code>pytorch-triton-rocm</code> package will be installed along with it. If you also install Triton at the same time, you may encounter a version conflict, which can be tricky to resolve.</p>
 <span id="more"></span>
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Randomly choose a grease value</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">choose_grease</span>():</span><br><span class="line">    grease_list = [<span class="string">b&quot;\x0a\x0a&quot;</span>, <span class="string">b&quot;\x1a\x1a&quot;</span>, <span class="string">b&quot;\x2a\x2a&quot;</span>, <span class="string">b&quot;\x3a\x3a&quot;</span>, <span class="string">b&quot;\x4a\x4a&quot;</span>, <span class="string">b&quot;\x5a\x5a&quot;</span>, <span class="string">b&quot;\x6a\x6a&quot;</span>, <span class="string">b&quot;\x7a\x7a&quot;</span>, <span class="string">b&quot;\x8a\x8a&quot;</span>, <span class="string">b&quot;\x9a\x9a&quot;</span>, <span class="string">b&quot;\xaa\xaa&quot;</span>, <span class="string">b&quot;\xba\xba&quot;</span>, <span class="string">b&quot;\xca\xca&quot;</span>, <span class="string">b&quot;\xda\xda&quot;</span>, <span class="string">b&quot;\xea\xea&quot;</span>, <span class="string">b&quot;\xfa\xfa&quot;</span>]</span><br><span class="line">    <span class="keyword">return</span> random.choice(grease_list)</span><br></pre></td></tr></table></figure>
+<p>According to <a target="_blank" rel="noopener" href="https://pytorch.org/get-started/locally/">PyTorch</a>, you can use the following commands to install PyTorch for the ROCm backend using pip:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm6.1</span><br></pre></td></tr></table></figure>
 
-<h1 id="What-is-GREASE"><a href="#What-is-GREASE" class="headerlink" title="What is GREASE?"></a>What is GREASE?</h1><p>GREASE stands for Generate Random Extensions And Sustain Extensibility, which was formally defined in <a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc8701">RFC8701</a>. It’s a special mechanism to mitigate the difficulty in extending the TLS protocol in the future.</p>
-<p>For those familiar with TLS, you know that during the handshake phase, the client first sends a ClientHello record to the server, which includes supported TLS versions, CipherSuites types, and some extensions. If the server can process this, it returns a ServerHello record with the chosen CipherSuite and some extensions. For extensibility, some values for cipher and extension fields are reserved for future use. For example, <a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc5246">TLSv1.2</a> introduced AEAD-type ciphers.</p>
-<p>Similarly, GREASE limits certain reserved values for these parameters, called GREASE values, which currently hold no meaning in the TLS protocol. For instance, GREASE values for CipherSuites and the Application-Layer Protocol Negotiation (ALPN) extension include:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;0x0A,0x0A&#125;, &#123;0x1A,0x1A&#125;, &#123;0x2A,0x2A&#125;, &#123;0x3A,0x3A&#125;, &#123;0x4A,0x4A&#125;, &#123;0x5A,0x5A&#125;, &#123;0x6A,0x6A&#125;, &#123;0x7A,0x7A&#125;, &#123;0x8A,0x8A&#125;, &#123;0x9A,0x9A&#125;, &#123;0xAA,0xAA&#125;, &#123;0xBA,0xBA&#125;, &#123;0xCA,0xCA&#125;, &#123;0xDA,0xDA&#125;, &#123;0xEA,0xEA&#125;, &#123;0xFA,0xFA&#125;</span><br></pre></td></tr></table></figure>
-
-<p>The protocol specifies that when the client sends a ClientHello, it <strong>may</strong> select one or more GREASE values to be sent to the server.</p>
-<blockquote>
-<p>A client MAY select one or more GREASE cipher suite values and advertise them in the “cipher_suites” field.</p>
-</blockquote>
-<p>If the client receives a record from the server (e.g. ServerHello, Certificate, EncryptedExtensions, etc.) containing a GREASE value, it <strong>must</strong> reject the record and close the connection.</p>
-<blockquote>
-<p>Clients MUST reject GREASE values when negotiated by the server. In particular, the client MUST fail the connection if a GREASE value appears in any of the following</p>
-</blockquote>
-<p>Furthermore, when the server finds GREASE values in ClientHello:</p>
-<ol>
-<li>It <strong>must not</strong> use these GREASE values for further negotiation and must treat them as ordinary reserved values.</li>
-<li>It <strong>must</strong> ignore these values and use other available values in this field for negotiation.</li>
-</ol>
-<blockquote>
-<p>When processing a ClientHello, servers MUST NOT treat GREASE values differently from any unknown value. Servers MUST NOT negotiate any GREASE value when offered in a ClientHello. Servers MUST correctly ignore unknown values in a ClientHello and attempt to negotiate with one of the remaining parameters. (There may not be any known parameters remaining, in which case parameter negotiation will fail.)</p>
-</blockquote>
-<p>This is a brilliant design, akin to a prisoner’s dilemma. Every TLS library could be used both as a client or as a server. Given that there are several popular TLS libraries, there’s a great chance that the libraries used by the client and the server are different, which forces them to agree on this convention.</p>
-<p>Similarly, for parameters initially sent by the server, the RFC stipulates the behavior of the client and server.</p>
-<h1 id="Why-do-we-need-GREASE"><a href="#Why-do-we-need-GREASE" class="headerlink" title="Why do we need GREASE?"></a>Why do we need GREASE?</h1><p>One might wonder: if we want to reserve these values in the protocol, why don’t we just write them down in the protocol?</p>
-<p>This mechanism is based on practical considerations. Although RFCs are well-known and authoritative, they are merely standards made by the community. To be used in practice, they need to be implemented in libraries (such as OpenSSL, BoringSSL, etc.). In this conversion, the logic may deviate from the designer’s intent. This can cause significant problems for foundational network protocols deployed on a large scale, e.g. TLS.</p>
-<p>In the case of TLS, if we don’t have GREASE to constrain the implementations, libraries may only support the values in the current protocol and throw exceptions for unknown values.</p>
-<p>Although this implementation may work perfectly with the current protocol, when the IETF decides to upgrade it to have more CipherSuites values, libraries of newer protocol may fail to interact with older ones, hindering the deployment of the new protocol.</p>
-<p>It’s worth mentioning that GREASE values were initially set for the Version parameter, but it was removed in the final RFC.</p>
-<blockquote>
-<p>The values allocated above are thus no longer available for use as TLS or DTLS [RFC6347] version numbers.</p>
-</blockquote>
-<p>Therefore, in TLSv1.3, they have to use <code>supported_versions</code> extension to indicate the support for TLSv1.3, instead of using Version parameter, so that they can be compliant with TLSv1.2. For more details, see this Cloudflare <a target="_blank" rel="noopener" href="https://blog.cloudflare.com/why-tls-1-3-isnt-in-browsers-yet/">blog</a>.</p>
-<h1 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h1><p>In a large-scale system like the Internet, changes are difficult and always take a long time. The deployment and upgrade of foundational network protocols are among these challenges. Many protocols seem straightforward at first glances, but you can learn something when you dive deep.</p>
-<!-- # References -->
+<p>In addition to the packages listed in the command, a <code>pytorch-triton-rocm</code> package will also be installed. This package is essentially a selected version of <a target="_blank" rel="noopener" href="https://github.com/triton-lang/triton">Triton</a>, so the actual content of this package(in <code>site-packages</code>) is <code>triton/</code>, not <code>pytorch-triton-rocm/</code>.</p>
+<p>In this case, if you then install a standalone Triton package, there is a potential conflict because both <code>pytorch-triton-rocm</code> and <code>triton</code> packages target the same <code>triton/</code> directory.</p>
+<p>For example, you can’t actually uninstall <code>triton</code> due to dependency issues. Instead, you will need to uninstall both <code>pytorch-triton-rocm</code> and <code>triton</code> to resolve this.</p>
+<p>Hopefully this will help anyone in the same situation.</p>
 
     </div>
 
@@ -312,7 +261,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link: </strong>
-    <a href="http://骞.wang/2024/06/06/The-GREASE-Mechanism-in-TLS/" title="The GREASE Mechanism in TLS">http://骞.wang/2024/06/06/The-GREASE-Mechanism-in-TLS/</a>
+    <a href="http://骞.wang/2024/10/15/Package-Conflict-of-Triton-in-PyTorch-ROCm-PYPI-Distribution/" title="Package Conflict of Triton in PyTorch ROCm PYPI Distribution">http://骞.wang/2024/10/15/Package-Conflict-of-Triton-in-PyTorch-ROCm-PYPI-Distribution/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
@@ -322,10 +271,6 @@
 
 
       <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/tls/" rel="tag"># tls</a>
-              <a href="/tags/security/" rel="tag"># security</a>
-          </div>
 
         
 
@@ -333,12 +278,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2024/04/01/first-post/" rel="prev" title="About Me">
-      <i class="fa fa-chevron-left"></i> About Me
+    <a href="/2024/09/30/Make-Your-Win-Behave-Like-Mac-Use-Mac-Magic-Tracepad-and-HHKB-on-a-ThinkPad/" rel="prev" title="Make Your Win Behave Like Mac: Use Mac Magic TracePad and HHKB on a ThinkPad">
+      <i class="fa fa-chevron-left"></i> Make Your Win Behave Like Mac: Use Mac Magic TracePad and HHKB on a ThinkPad
     </a></div>
       <div class="post-nav-item">
-    <a href="/2024/06/06/Python-Multiprocessing-Another-Reason-to-Use-multiprocessing-Process-Instead-of-os-fork/" rel="next" title="Python Multiprocessing: Another Reason to Use multiprocessing.Process Instead of os.fork">
-      Python Multiprocessing: Another Reason to Use multiprocessing.Process Instead of os.fork <i class="fa fa-chevron-right"></i>
+    <a href="/2024/12/26/How-to-compile-kernels-without-GPU-in-Triton/" rel="next" title="How to Compile Triton Kernels Without GPU">
+      How to Compile Triton Kernels Without GPU <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -398,7 +343,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#What-is-GREASE"><span class="nav-number">1.</span> <span class="nav-text">What is GREASE?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Why-do-we-need-GREASE"><span class="nav-number">2.</span> <span class="nav-text">Why do we need GREASE?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Conclusion"><span class="nav-number">3.</span> <span class="nav-text">Conclusion</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TL-DR"><span class="nav-number">1.</span> <span class="nav-text">TL;DR</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -413,7 +358,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -424,7 +369,7 @@
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -469,13 +414,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">Symbols count total: </span>
-    <span title="Symbols count total">4k</span>
+    <span title="Symbols count total">5k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">Reading time total &asymp;</span>
-    <span title="Reading time total">15 mins.</span>
+    <span title="Reading time total">17 mins.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
   </div>

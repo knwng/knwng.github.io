@@ -173,7 +173,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://骞.wang/2024/10/14/Package-Conflict-of-Triton-in-PyTorch-ROCm-PYPI-Distribution/">
+    <link itemprop="mainEntityOfPage" href="http://骞.wang/2024/12/26/How-to-compile-kernels-without-GPU-in-Triton/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -187,7 +187,97 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2024/10/14/Package-Conflict-of-Triton-in-PyTorch-ROCm-PYPI-Distribution/" class="post-title-link" itemprop="url">Package Conflict of Triton in PyTorch ROCm PYPI Distribution</a>
+            <a href="/2024/12/26/How-to-compile-kernels-without-GPU-in-Triton/" class="post-title-link" itemprop="url">How to Compile Triton Kernels Without GPU</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2024-12-25 17:50:42 / Modified: 02:01:19" itemprop="dateCreated datePublished" datetime="2024-12-25T17:50:42-08:00">2024-12-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/tech/" itemprop="url" rel="index"><span itemprop="name">tech</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>618</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>2 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Recently, I encountered a situation where I needed to contribute to Triton without access to any GPU.<br>The only device I had was my M3 Mac. After some experimentation, it turns out that Triton has a well-designed abstraction layer, and you don’t need a GPU if you only want to work at the compiler level (i.e., MLIR and LLVM).</p>
+<p>The method is present in the codebase, but it’s not officially documented. I hope this guide will save someone else’s time.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/12/26/How-to-compile-kernels-without-GPU-in-Triton/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://骞.wang/2024/10/15/Package-Conflict-of-Triton-in-PyTorch-ROCm-PYPI-Distribution/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Kyle Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kyle's Personal Website">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/10/15/Package-Conflict-of-Triton-in-PyTorch-ROCm-PYPI-Distribution/" class="post-title-link" itemprop="url">Package Conflict of Triton in PyTorch ROCm PYPI Distribution</a>
         </h2>
 
         <div class="post-meta">
@@ -228,7 +318,7 @@
           <h1 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h1><p>When you install PyTorch on the ROCm platform for an AMD GPU, a <code>pytorch-triton-rocm</code> package will be installed along with it. If you also install Triton at the same time, you may encounter a version conflict, which can be tricky to resolve.</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2024/10/14/Package-Conflict-of-Triton-in-PyTorch-ROCm-PYPI-Distribution/#more" rel="contents">
+              <a class="btn" href="/2024/10/15/Package-Conflict-of-Triton-in-PyTorch-ROCm-PYPI-Distribution/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -252,7 +342,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://骞.wang/2024/09/29/Make-Your-Win-Behave-Like-Mac-Use-Mac-Magic-Tracepad-and-HHKB-on-a-ThinkPad/">
+    <link itemprop="mainEntityOfPage" href="http://骞.wang/2024/09/30/Make-Your-Win-Behave-Like-Mac-Use-Mac-Magic-Tracepad-and-HHKB-on-a-ThinkPad/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -266,7 +356,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2024/09/29/Make-Your-Win-Behave-Like-Mac-Use-Mac-Magic-Tracepad-and-HHKB-on-a-ThinkPad/" class="post-title-link" itemprop="url">Make Your Win Behave Like Mac: Use Mac Magic TracePad and HHKB on a ThinkPad</a>
+            <a href="/2024/09/30/Make-Your-Win-Behave-Like-Mac-Use-Mac-Magic-Tracepad-and-HHKB-on-a-ThinkPad/" class="post-title-link" itemprop="url">Make Your Win Behave Like Mac: Use Mac Magic TracePad and HHKB on a ThinkPad</a>
         </h2>
 
         <div class="post-meta">
@@ -323,7 +413,7 @@
           <p>Recently, for some reason(sadly), I have to use ThinkPad and Windows for work. It has been a long time since my last time using a Windows laptop. But with some plugins and key remapping, I managed to imitate a mac-like experience on Windows.</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2024/09/29/Make-Your-Win-Behave-Like-Mac-Use-Mac-Magic-Tracepad-and-HHKB-on-a-ThinkPad/#more" rel="contents">
+              <a class="btn" href="/2024/09/30/Make-Your-Win-Behave-Like-Mac-Use-Mac-Magic-Tracepad-and-HHKB-on-a-ThinkPad/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -347,7 +437,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://骞.wang/2024/06/06/Python-Multiprocessing-Another-Reason-to-Use-multiprocessing-Process-Instead-of-os-fork/">
+    <link itemprop="mainEntityOfPage" href="http://骞.wang/2024/06/07/Python-Multiprocessing-Another-Reason-to-Use-multiprocessing-Process-Instead-of-os-fork/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -361,7 +451,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2024/06/06/Python-Multiprocessing-Another-Reason-to-Use-multiprocessing-Process-Instead-of-os-fork/" class="post-title-link" itemprop="url">Python Multiprocessing: Another Reason to Use multiprocessing.Process Instead of os.fork</a>
+            <a href="/2024/06/07/Python-Multiprocessing-Another-Reason-to-Use-multiprocessing-Process-Instead-of-os-fork/" class="post-title-link" itemprop="url">Python Multiprocessing: Another Reason to Use multiprocessing.Process Instead of os.fork</a>
         </h2>
 
         <div class="post-meta">
@@ -421,7 +511,7 @@
 <h1 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h1><p>When you spawn processes with <code>multiprocessing.Process</code> and select <code>fork</code> as the start method, there are additional operations performed besides just invoking <code>os.fork</code>, such as invoking some after-fork hooks registered by other objects. You can’t trigger these hooks if using <code>os.fork</code> directly, potentially leading to errors.</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2024/06/06/Python-Multiprocessing-Another-Reason-to-Use-multiprocessing-Process-Instead-of-os-fork/#more" rel="contents">
+              <a class="btn" href="/2024/06/07/Python-Multiprocessing-Another-Reason-to-Use-multiprocessing-Process-Instead-of-os-fork/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -445,7 +535,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://骞.wang/2024/06/06/The-GREASE-Mechanism-in-TLS/">
+    <link itemprop="mainEntityOfPage" href="http://骞.wang/2024/06/07/The-GREASE-Mechanism-in-TLS/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -459,7 +549,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2024/06/06/The-GREASE-Mechanism-in-TLS/" class="post-title-link" itemprop="url">The GREASE Mechanism in TLS</a>
+            <a href="/2024/06/07/The-GREASE-Mechanism-in-TLS/" class="post-title-link" itemprop="url">The GREASE Mechanism in TLS</a>
         </h2>
 
         <div class="post-meta">
@@ -520,7 +610,7 @@
 <p>A few days ago, while reading about JARM, a novel TLS server fingerprinting tool proposed by <a target="_blank" rel="noopener" href="https://engineering.salesforce.com/easily-identify-malicious-servers-on-the-internet-with-jarm-e095edac525a">Salesforce</a>, I noticed they used a <code>choose_grease()</code> function when constructing the TLS ClientHello record, which drove me to look into this GREASE mechanism.</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2024/06/06/The-GREASE-Mechanism-in-TLS/#more" rel="contents">
+              <a class="btn" href="/2024/06/07/The-GREASE-Mechanism-in-TLS/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -544,7 +634,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://骞.wang/2024/04/01/first-post/">
+    <link itemprop="mainEntityOfPage" href="http://骞.wang/2024/04/02/first-post/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -558,7 +648,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2024/04/01/first-post/" class="post-title-link" itemprop="url">About Me</a>
+            <a href="/2024/04/02/first-post/" class="post-title-link" itemprop="url">About Me</a>
         </h2>
 
         <div class="post-meta">
@@ -688,7 +778,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -699,7 +789,7 @@
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -744,13 +834,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">Symbols count total: </span>
-    <span title="Symbols count total">4k</span>
+    <span title="Symbols count total">5k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">Reading time total &asymp;</span>
-    <span title="Reading time total">15 mins.</span>
+    <span title="Reading time total">17 mins.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
   </div>
